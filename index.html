@@ -3,127 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abyssinia Premium Clinic | Modern Healthcare</title>
+    <title>Abyssinia Premium Medical Center</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for Premium Icons -->
+    <!-- FontAwesome Premium Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        /* Custom scrollbar handling for the AI Chat layout */
+        .chat-scrollbar::-webkit-scrollbar { width: 4px; }
+        .chat-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .chat-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased">
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-teal-500 selection:text-white">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-teal-900 text-white text-xs md:text-sm py-2 px-4 flex justify-between items-center border-b border-teal-800">
-        <div class="flex items-center space-x-4">
-            <span><i class="fa-solid fa-phone text-teal-400 mr-1"></i> +251 911 XX XX XX</span>
-            <span class="hidden md:inline"><i class="fa-solid fa-location-dot text-teal-400 mr-1"></i> Bole, Addis Ababa, Ethiopia</span>
-        </div>
-        <div class="flex items-center space-x-3">
-            <span class="cursor-pointer hover:text-teal-300 font-semibold text-xs border border-teal-600 px-2 py-0.5 rounded">አማርኛ</span>
-            <span class="text-teal-400 font-bold">EN</span>
+    <!-- Top Security & Emergency Ribbon -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2.5 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center"><i class="fa-solid fa-phone-flip text-teal-400 mr-2"></i> Shortcode: <strong class="text-white ml-1">8222</strong></span>
+                <span class="hidden md:flex items-center"><i class="fa-solid fa-location-dot text-teal-400 mr-2"></i> Bole Road, Next to Mega Building, Addis Ababa</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-1 bg-slate-800 border border-slate-700 rounded-lg p-1 text-[11px]">
+                    <button class="px-2 py-0.5 rounded text-slate-400 hover:text-white transition">አማርኛ</button>
+                    <button class="px-2 py-0.5 rounded bg-teal-600 text-white font-semibold shadow-sm">EN</button>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Header / Navigation -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+    <!-- Corporate Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl shadow-sm border-b border-slate-100/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
-            <!-- Brand Logo -->
-            <div class="flex items-center space-x-3">
-                <div class="bg-teal-600 text-white p-2.5 rounded-xl shadow-md shadow-teal-600/20">
-                    <i class="fa-solid fa-house-medical text-xl"></i>
+            <!-- Brand Mark -->
+            <a href="#" class="flex items-center space-x-3.5 group">
+                <div class="bg-gradient-to-br from-teal-500 to-cyan-600 text-white p-3 rounded-2xl shadow-xl shadow-teal-500/20 group-hover:scale-105 transition-transform duration-300">
+                    <i class="fa-solid fa-square-h text-2xl tracking-wide"></i>
                 </div>
                 <div>
-                    <span class="text-xl font-bold text-gray-900 tracking-tight block">ABYSSINIA</span>
-                    <span class="text-xs text-teal-600 font-semibold uppercase tracking-widest -mt-1 block">Premium Clinic</span>
+                    <span class="text-xl font-extrabold text-slate-900 tracking-tight block uppercase">Abyssinia</span>
+                    <span class="text-xs text-teal-600 font-bold uppercase tracking-widest -mt-0.5 block">Medical Center</span>
                 </div>
-            </div>
+            </a>
 
-            <!-- Desktop Nav Links -->
-            <nav class="hidden md:flex items-center space-x-8 font-medium text-gray-600">
-                <a href="#home" class="text-teal-600 hover:text-teal-700 transition">Home</a>
-                <a href="#services" class="hover:text-teal-600 transition">Specialties</a>
-                <a href="#about" class="hover:text-teal-600 transition">About Us</a>
-                <a href="#contact" class="hover:text-teal-600 transition">Find Us</a>
+            <!-- Global Navigation Paths -->
+            <nav class="hidden lg:flex items-center space-x-10 font-semibold text-sm text-slate-600">
+                <a href="#about" class="hover:text-teal-600 transition-colors">About</a>
+                <a href="#departments" class="hover:text-teal-600 transition-colors">Departments</a>
+                <a href="#live-status" class="flex items-center text-teal-600 hover:text-teal-700 transition-colors">
+                    <span class="h-2 w-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span> Live Doctor Grid
+                </a>
+                <a href="#packages" class="hover:text-teal-600 transition-colors">Diagnostic Packages</a>
             </nav>
 
-            <!-- CTA Button -->
-            <div class="hidden sm:block">
-                <a href="#book" class="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-teal-600/20 transition duration-300 transform hover:-translate-y-0.5">
-                    Book Appointment
+            <!-- Conversion Action -->
+            <div class="flex items-center space-x-4">
+                <a href="#portal" class="hidden sm:inline-flex bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm px-6 py-3 rounded-xl transition duration-300 shadow-lg shadow-slate-900/10">
+                    Patient Portal
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative bg-gradient-to-br from-teal-50/60 via-white to-gray-50 pt-12 pb-20 md:py-32 overflow-hidden">
+    <!-- Interactive Immersive Hero Framework -->
+    <section class="relative bg-gradient-to-b from-slate-100/60 via-white to-slate-50 pt-12 pb-24 md:py-32 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
                 
-                <!-- Left Text Column -->
-                <div class="md:col-span-7 space-y-6 text-center md:text-left">
-                    <div class="inline-flex items-center space-x-2 bg-teal-50 border border-teal-100 text-teal-700 px-3 py-1.5 rounded-full text-sm font-semibold">
-                        <span class="flex h-2 w-2 rounded-full bg-teal-500 animate-pulse"></span>
-                        <span>Now Accepting New Patients in Addis Ababa</span>
+                <!-- Messaging Column -->
+                <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-50 to-cyan-50 border border-teal-100 text-teal-800 px-3.5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider shadow-sm">
+                        <i class="fa-solid fa-shield-halved text-teal-500 text-sm"></i>
+                        <span>Ministry of Health Certified Premium Facility</span>
                     </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
-                        World-Class Healthcare, <span class="text-teal-600">Close to Home.</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
+                        Advanced Medicine.<br><span class="bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">Trusted Clinical Care.</span>
                     </h1>
-                    <p class="text-gray-600 text-lg max-w-xl mx-auto md:mx-0 leading-relaxed">
-                        Experience exceptional medical expertise and compassionate care at Abyssinia Premium Clinic. Equipped with advanced diagnostics and a dedicated team of top specialists.
+                    <p class="text-slate-500 text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
+                        Abyssinia Medical Center combines world-class diagnostic modalities with expert specialists to deliver comprehensive medical infrastructure right here in Addis Ababa.
                     </p>
                     
-                    <!-- Hero CTAs -->
-                    <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-2">
-                        <a href="#book" class="bg-teal-600 hover:bg-teal-700 text-white font-semibold text-center px-8 py-4 rounded-xl shadow-xl shadow-teal-600/25 transition duration-300">
-                            Schedule a Visit <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    <!-- Structural Actions -->
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#portal" class="bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white font-bold text-center px-8 py-4 rounded-xl shadow-xl shadow-teal-600/25 transition-all duration-300 transform hover:-translate-y-0.5">
+                            <i class="fa-regular fa-calendar-check mr-2"></i> Request Urgent Appointment
                         </a>
-                        <a href="#services" class="bg-white hover:bg-gray-50 text-gray-700 border border-gray-200 font-semibold text-center px-8 py-4 rounded-xl shadow-sm transition duration-300">
-                            Explore Services
+                        <a href="#live-status" class="bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-bold text-center px-8 py-4 rounded-xl shadow-sm transition-all duration-300">
+                            Check Live Doctor Wait-Times
                         </a>
-                    </div>
-
-                    <!-- Quick Metrics -->
-                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-gray-200/80 max-w-md mx-auto md:mx-0">
-                        <div>
-                            <span class="block text-2xl font-bold text-gray-900">15+</span>
-                            <span class="text-xs text-gray-500 uppercase font-semibold tracking-wider">Specialists</span>
-                        </div>
-                        <div>
-                            <span class="block text-2xl font-bold text-gray-900">99%</span>
-                            <span class="text-xs text-gray-500 uppercase font-semibold tracking-wider">Satisfaction</span>
-                        </div>
-                        <div>
-                            <span class="block text-2xl font-bold text-gray-900">24/7</span>
-                            <span class="text-xs text-gray-500 uppercase font-semibold tracking-wider">Emergency</span>
-                        </div>
                     </div>
                 </div>
 
-                <!-- Right Visual Mockup Column -->
-                <div class="md:col-span-5 relative hidden md:block">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-teal-600 to-emerald-500 rounded-3xl transform rotate-3 scale-95 opacity-10 blur-xl"></div>
-                    <div class="bg-white border border-gray-100 shadow-2xl rounded-3xl p-6 relative overflow-hidden">
-                        <div class="bg-teal-50 rounded-2xl p-8 text-center space-y-4">
-                            <div class="w-16 h-16 bg-teal-600 text-white rounded-2xl mx-auto flex items-center justify-center shadow-lg shadow-teal-600/30">
-                                <i class="fa-solid fa-user-doctor text-2xl"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-900">Interactive Sample Interface</h3>
-                            <p class="text-sm text-gray-500">This layout demonstrates a premium, customer-ready landing screen tailored to modern clinic standards.</p>
-                            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between text-left">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center">
-                                        <i class="fa-solid fa-check"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-xs text-gray-400 font-medium">Next Available Slot</p>
-                                        <p class="text-sm font-bold text-gray-800">Today, 2:30 PM (Local Time)</p>
-                                    </div>
+                <!-- Graphic/Visual High-End Component -->
+                <div class="lg:col-span-6 relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-3xl blur-2xl opacity-15"></div>
+                    <div class="relative bg-white border border-slate-100 p-3.5 rounded-3xl shadow-2xl">
+                        <!-- High Quality Doctor Stock Reference Photo -->
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" 
+                             alt="Modern Healthcare Diagnostics" 
+                             class="w-full h-[400px] object-cover rounded-2xl shadow-inner">
+                        
+                        <!-- Floating Glass Dashboard KPI Badge over image -->
+                        <div class="absolute bottom-8 left-8 right-8 bg-white/80 backdrop-blur-xl p-5 border border-white/60 shadow-xl rounded-2xl flex items-center justify-between">
+                            <div class="flex items-center space-x-3.5">
+                                <div class="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 text-white rounded-xl flex items-center justify-center shadow-lg">
+                                    <i class="fa-solid fa-microscope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-slate-900">Digital Lab Integration</h4>
+                                    <p class="text-xs text-slate-500">Instant Reports via SMS / Telegram</p>
                                 </div>
                             </div>
+                            <span class="text-xs font-extrabold uppercase px-2.5 py-1 bg-emerald-100 text-emerald-800 rounded-md tracking-wider">Active</span>
                         </div>
                     </div>
                 </div>
@@ -132,104 +128,172 @@
         </div>
     </section>
 
-    <!-- Services Grid Section -->
-    <section id="services" class="py-20 bg-white">
+    <!-- Operational Dynamic Interface Tier: Live Board -->
+    <section id="live-status" class="py-16 bg-white border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-                <span class="text-xs font-bold uppercase tracking-widest text-teal-600 bg-teal-50 px-3 py-1 rounded-full">Our Medical Focus</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">Our Specialized Departments</h2>
-                <p class="text-gray-500">Providing end-to-end medical services using cutting-edge diagnostics and expert protocols right in the capital.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-gray-50 hover:bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-100 transition duration-300 group hover:shadow-xl hover:shadow-teal-600/5">
-                    <div class="w-12 h-12 bg-teal-100 group-hover:bg-teal-600 text-teal-700 group-hover:text-white rounded-xl flex items-center justify-center transition duration-300 mb-6">
-                        <i class="fa-solid fa-stethoscope text-xl"></i>
+            <div class="bg-slate-900 rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden text-white">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-teal-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
+                
+                <div class="relative z-10 grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-4 space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-widest text-teal-400 flex items-center">
+                            <span class="h-2 w-2 rounded-full bg-teal-400 mr-2 animate-ping"></span> Live Center Analytics
+                        </span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Today's Specialist Roster Availability</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Show this operational dashboard view to the client. This live UI proves you can build real, data-driven systems instead of flat text blogs.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">General Medicine</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Comprehensive health checkups, chronic disease management, and preventative health guidance for all ages.</p>
-                    <a href="#book" class="text-teal-600 group-hover:text-teal-700 font-semibold text-sm inline-flex items-center">Learn More <i class="fa-solid fa-chevron-right ml-1 text-xs"></i></a>
-                </div>
 
-                <!-- Card 2 -->
-                <div class="bg-gray-50 hover:bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-100 transition duration-300 group hover:shadow-xl hover:shadow-teal-600/5">
-                    <div class="w-12 h-12 bg-teal-100 group-hover:bg-teal-600 text-teal-700 group-hover:text-white rounded-xl flex items-center justify-center transition duration-300 mb-6">
-                        <i class="fa-solid fa-baby text-xl"></i>
+                    <!-- Interactive Data Grid Mockup -->
+                    <div class="lg:col-span-8 grid sm:grid-cols-2 gap-4">
+                        <!-- Doctor Row 1 -->
+                        <div class="bg-slate-800/80 border border-slate-700/60 p-4 rounded-2xl flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=120&h=120&q=80" alt="Doctor" class="w-12 h-12 object-cover rounded-xl border border-slate-700">
+                                <div>
+                                    <h5 class="text-sm font-bold text-white">Dr. Dawit Alamu</h5>
+                                    <p class="text-xs text-slate-400">Chief Consultant Cardiologist</p>
+                                </div>
+                            </div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-md">Available</span>
+                        </div>
+                        <!-- Doctor Row 2 -->
+                        <div class="bg-slate-800/80 border border-slate-700/60 p-4 rounded-2xl flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&w=120&h=120&q=80" alt="Doctor" class="w-12 h-12 object-cover rounded-xl border border-slate-700">
+                                <div>
+                                    <h5 class="text-sm font-bold text-white">Dr. Helen Tsagaye</h5>
+                                    <p class="text-xs text-slate-400">Senior Pediatric Specialist</p>
+                                </div>
+                            </div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-md">In Surgery</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Pediatrics & Child Care</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Dedicated clinical tracking, developmental advice, and immunizations for infants, toddlers, and adolescents.</p>
-                    <a href="#book" class="text-teal-600 group-hover:text-teal-700 font-semibold text-sm inline-flex items-center">Learn More <i class="fa-solid fa-chevron-right ml-1 text-xs"></i></a>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-gray-50 hover:bg-white p-8 rounded-2xl border border-gray-100 hover:border-teal-100 transition duration-300 group hover:shadow-xl hover:shadow-teal-600/5">
-                    <div class="w-12 h-12 bg-teal-100 group-hover:bg-teal-600 text-teal-700 group-hover:text-white rounded-xl flex items-center justify-center transition duration-300 mb-6">
-                        <i class="fa-solid fa-microscope text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Advanced Diagnostics</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-4">State-of-the-art laboratory testing, high-resolution ultrasound, and rapid imaging turnaround protocols.</p>
-                    <a href="#book" class="text-teal-600 group-hover:text-teal-700 font-semibold text-sm inline-flex items-center">Learn More <i class="fa-solid fa-chevron-right ml-1 text-xs"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Booking & Payment Mockup Section -->
-    <section id="book" class="py-20 bg-gray-50 border-t border-b border-gray-100">
+    <!-- Monetization / Checkup Packages Tier -->
+    <section id="packages" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-teal-600 bg-teal-100 px-3.5 py-1.5 rounded-full">Preventative Screenings</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Executive Diagnostic Health Packages</h2>
+                <p class="text-slate-500">Premium comprehensive screening structures tailored for corporate checkups or personalized medical evaluations.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Package 1 -->
+                <div class="bg-white border border-slate-200/80 rounded-3xl p-8 relative flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="space-y-4">
+                        <div class="text-teal-600 bg-teal-50 w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <h4 class="text-xl font-bold text-slate-900">Cardio Check</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Basic cardiac review profile including full ECG protocols, pressure mapping, and primary consults.</p>
+                        <div class="pt-2">
+                            <span class="text-3xl font-extrabold text-slate-950">4,500</span> <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">ETB / One-time</span>
+                        </div>
+                        <ul class="space-y-2.5 pt-4 text-xs font-medium text-slate-600 border-t border-slate-100">
+                            <li><i class="fa-solid fa-check text-teal-500 mr-2"></i> Comprehensive Digital ECG</li>
+                            <li><i class="fa-solid fa-check text-teal-500 mr-2"></i> Specialist Consult Review</li>
+                            <li><i class="fa-solid fa-check text-teal-500 mr-2"></i> Lipid Profile Screening</li>
+                        </ul>
+                    </div>
+                    <a href="#portal" class="mt-8 block text-center bg-slate-100 hover:bg-teal-600 hover:text-white text-slate-700 text-xs font-bold py-3.5 rounded-xl transition duration-300">Select Profile</a>
+                </div>
+
+                <!-- Package 2: Highlighted Featured Option -->
+                <div class="bg-white border-2 border-teal-500 rounded-3xl p-8 relative flex flex-col justify-between shadow-xl shadow-teal-500/5 ring-4 ring-teal-500/5">
+                    <span class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-extrabold text-[10px] tracking-widest uppercase px-4 py-1.5 rounded-full shadow-md">Most Requested</span>
+                    <div class="space-y-4">
+                        <div class="text-cyan-600 bg-cyan-50 w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-dna"></i></div>
+                        <h4 class="text-xl font-bold text-slate-900">Comprehensive Executive Screening</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Full systematic metabolic, imaging, and expert panels engineered for comprehensive executive validation.</p>
+                        <div class="pt-2">
+                            <span class="text-3xl font-extrabold text-slate-950">9,200</span> <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">ETB / One-time</span>
+                        </div>
+                        <ul class="space-y-2.5 pt-4 text-xs font-medium text-slate-600 border-t border-slate-100">
+                            <li><i class="fa-solid fa-check text-teal-500 mr-2"></i> Complete Metabolic Bio-Panel</li>
+                            <li><i class="fa-solid fa-check text-teal-500 mr-2"></i> High-Resolution Target Ultrasound</li>
+                            <li><i class="fa-solid fa-check text-teal-500 mr-2"></i> Executive Physician Diagnosis</li>
+                            <li><i class="fa-solid fa-check text-teal-500 mr-2"></i> Priority Next-Day Online Reporting</li>
+                        </ul>
+                    </div>
+                    <a href="#portal" class="mt-8 block text-center bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white text-xs font-bold py-3.5 rounded-xl transition duration-300 shadow-md">Secure Package</a>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="bg-white border border-slate-200/80 rounded-3xl p-8 relative flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="space-y-4">
+                        <div class="text-purple-600 bg-purple-50 w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-baby-carriage"></i></div>
+                        <h4 class="text-xl font-bold text-slate-900">Maternal & Infant Care</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Carefully tailored developmental and diagnostic tracking packages covering prenatal panels and childhood vaccinations.</p>
+                        <div class="pt-2">
+                            <span class="text-3xl font-extrabold text-slate-950">6,100</span> <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">ETB / Profile</span>
+                        </div>
+                        <ul class="space-y-2.5 pt-4 text-xs font-medium text-slate-600 border-t border-slate-100">
+                            <li><i class="fa-solid fa-check text-teal-500 mr-2"></i> Fetal Growth Ultrasound Tracking</li>
+                            <li><i class="fa-solid fa-check text-teal-500 mr-2"></i> Pediatric Immunization Protocols</li>
+                            <li><i class="fa-solid fa-check text-teal-500 mr-2"></i> 24/7 Midwife On-Call Access</li>
+                        </ul>
+                    </div>
+                    <a href="#portal" class="mt-8 block text-center bg-slate-100 hover:bg-teal-600 hover:text-white text-slate-700 text-xs font-bold py-3.5 rounded-xl transition duration-300">Select Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operational Secure Patient Ingestion Portal Section -->
+    <section id="portal" class="py-20 bg-white border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Left Description & Local Payment Pitch -->
                 <div class="lg:col-span-5 space-y-6">
-                    <span class="text-xs font-bold uppercase tracking-widest text-teal-600 bg-teal-100/60 px-3 py-1 rounded-full">Seamless Operations</span>
-                    <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight">Digital Booking Built For Ethiopia</h2>
-                    <p class="text-gray-600 leading-relaxed">
-                        Show your clients how simple it will be for their patients to reserve slots. We can even integrate popular digital wallets to automate registration deposits.
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-teal-600 bg-teal-50 px-3 py-1.5 rounded-xl">Security Framework</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight leading-tight">Patient Registry & Intake Protocol</h2>
+                    <p class="text-slate-500 leading-relaxed text-sm">
+                        This section represents a production-ready client interface form block. We can configure automated appointment validation using integrated transactional SMS mechanisms.
                     </p>
-                    
-                    <!-- Integrated Payment Badges Display -->
-                    <div class="p-4 bg-white rounded-2xl border border-gray-200/60 shadow-sm space-y-3">
-                        <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Supported Payment Systems Preview</p>
-                        <div class="flex items-center space-x-4">
-                            <div class="px-3 py-2 bg-blue-50 border border-blue-100 rounded-lg text-blue-700 font-bold text-xs tracking-tight">Telebirr Ready</div>
-                            <div class="px-3 py-2 bg-amber-50 border border-amber-100 rounded-lg text-amber-700 font-bold text-xs tracking-tight">CBE Birr Ready</div>
-                            <div class="px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-gray-700 font-bold text-xs tracking-tight">Cash at Counter</div>
+                    <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200/60 flex items-start space-x-4">
+                        <div class="p-2.5 bg-blue-100 text-blue-700 rounded-xl"><i class="fa-solid fa-wallet text-lg"></i></div>
+                        <div>
+                            <h5 class="text-sm font-bold text-slate-900">Integrated Digital Settlement API</h5>
+                            <p class="text-xs text-slate-400 mt-1">Pre-authorization options built directly for Telebirr Merchant accounts or CBE Birr Web Gateways.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Form Box Mockup -->
                 <div class="lg:col-span-7">
-                    <div class="bg-white p-8 rounded-3xl shadow-xl shadow-gray-200/50 border border-gray-100">
-                        <h3 class="text-xl font-bold text-gray-900 mb-6">Demo Appointment Form</h3>
+                    <div class="bg-gradient-to-b from-white to-slate-50/50 p-8 rounded-3xl shadow-xl border border-slate-200/60 relative">
+                        <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center"><i class="fa-solid fa-user-pen text-teal-500 mr-2.5"></i> Secure Digital Registration Panel</h3>
                         <form onsubmit="event.preventDefault();" class="space-y-4">
                             <div class="grid sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label class="block text-xs font-bold text-gray-500 uppercase mb-1.5 tracking-wider">Full Name</label>
-                                    <input type="text" placeholder="e.g., Abebe Kebede" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-teal-500 text-sm transition">
+                                    <label class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Full Legal Name</label>
+                                    <input type="text" placeholder="Abebe Kebede" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-teal-500 text-xs font-medium transition shadow-sm">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-bold text-gray-500 uppercase mb-1.5 tracking-wider">Phone Number</label>
-                                    <input type="tel" placeholder="+251 9XX XXX XXX" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-teal-500 text-sm transition">
+                                    <label class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Primary Phone Connection</label>
+                                    <input type="tel" placeholder="+251 9XX XXX XXX" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-teal-500 text-xs font-medium transition shadow-sm">
                                 </div>
                             </div>
                             <div class="grid sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label class="block text-xs font-bold text-gray-500 uppercase mb-1.5 tracking-wider">Department</label>
-                                    <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-teal-500 text-sm transition bg-white text-gray-600">
-                                        <option>General Consultation</option>
-                                        <option>Pediatrics</option>
-                                        <option>Dental Checkup</option>
+                                    <label class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Target Clinical Specialty</label>
+                                    <select class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-teal-500 text-xs font-medium transition text-slate-500 shadow-sm">
+                                        <option>Cardiological Assessment Profile</option>
+                                        <option>Pediatric Consultation Unit</option>
+                                        <option>Advanced Metabolic Testing</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-bold text-gray-500 uppercase mb-1.5 tracking-wider">Preferred Date</label>
-                                    <input type="date" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-teal-500 text-sm transition text-gray-600">
+                                    <label class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Desired Target Date</label>
+                                    <input type="date" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-teal-500 text-xs font-medium transition text-slate-500 shadow-sm">
                                 </div>
                             </div>
-                            <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3.5 rounded-xl transition duration-300 mt-2 shadow-lg shadow-teal-600/10">
-                                Submit Request View
+                            <button type="submit" class="w-full bg-gradient-to-r from-slate-900 to-slate-800 hover:from-slate-800 hover:to-slate-700 text-white font-bold py-4 rounded-xl transition duration-300 text-xs tracking-wider uppercase mt-2 shadow-lg">
+                                Transmit Appointment Intake
                             </button>
                         </form>
                     </div>
@@ -239,59 +303,185 @@
         </div>
     </section>
 
-    <!-- Contact & Location Footer Section -->
-    <footer id="contact" class="bg-gray-900 text-gray-400 py-16 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-12">
-            
-            <!-- Column 1: Info -->
-            <div class="space-y-4">
+    <!-- Professional Global Footer Grid -->
+    <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12 text-xs">
+            <div class="space-y-4 md:col-span-2">
                 <div class="flex items-center space-x-3 text-white">
-                    <div class="bg-teal-600 p-2 rounded-lg">
-                        <i class="fa-solid fa-house-medical"></i>
-                    </div>
-                    <span class="text-lg font-bold tracking-tight">Abyssinia Premium Clinic</span>
+                    <div class="bg-gradient-to-tr from-teal-500 to-cyan-500 p-2 rounded-xl text-md"><i class="fa-solid fa-square-h"></i></div>
+                    <span class="text-base font-extrabold tracking-tight uppercase">Abyssinia Medical Center</span>
                 </div>
-                <p class="text-sm text-gray-500 leading-relaxed">
-                    A premium digital model demonstrating clean deployment architecture, professional layout UI, and flawless responsiveness.
+                <p class="text-slate-500 leading-relaxed pr-6">
+                    A premium operational design model custom-architected for premium private medical centers in Addis Ababa. Includes modern monetization frameworks, high-resolution visual layout hierarchies, and native telemetry previews.
                 </p>
             </div>
-
-            <!-- Column 2: Hours -->
             <div class="space-y-3">
-                <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Working Hours</h4>
-                <ul class="text-sm space-y-2 text-gray-400">
-                    <li class="flex justify-between border-b border-gray-800 pb-1"><span>Monday - Friday</span> <span class="text-teal-400">8:35 AM - 6:00 PM</span></li>
-                    <li class="flex justify-between border-b border-gray-800 pb-1"><span>Saturday</span> <span class="text-teal-400">8:35 AM - 2:00 PM</span></li>
-                    <li class="flex justify-between text-rose-400 font-medium"><span>Sunday / Holidays</span> <span>Emergency Only</span></li>
+                <h4 class="text-white font-bold uppercase tracking-widest text-[10px]">Operational Hours</h4>
+                <ul class="space-y-2 text-slate-500">
+                    <li class="flex justify-between border-b border-slate-900 pb-1.5"><span>Monday - Friday</span> <span class="text-teal-400 font-semibold">8:00 AM - 6:30 PM</span></li>
+                    <li class="flex justify-between border-b border-slate-900 pb-1.5"><span>Saturday</span> <span class="text-teal-400 font-semibold">8:00 AM - 3:00 PM</span></li>
+                    <li class="flex justify-between text-rose-400 font-semibold"><span>Emergency Core</span> <span>24 Hours Active</span></li>
                 </ul>
             </div>
-
-            <!-- Column 3: Local Address -->
             <div class="space-y-3">
-                <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Our Address</h4>
-                <p class="text-sm text-gray-400 leading-relaxed">
-                    Bole Sub-City, Ward 03,<br>
-                    Rwanda Road, Near Premium Buildings,<br>
+                <h4 class="text-white font-bold uppercase tracking-widest text-[10px]">Location Data</h4>
+                <p class="text-slate-500 leading-relaxed">
+                    Bole Sub-City, Ward 02,<br>
+                    Africa Avenue / Bole Road,<br>
                     Addis Ababa, Ethiopia
                 </p>
             </div>
         </div>
-
-        <!-- Footnote Info Bar -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-600 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p>&copy; 2026 Abyssinia Premium Clinic Sample. Developed for business proof-of-concept.</p>
-            <div class="flex space-x-4 text-sm">
-                <a href="#" class="hover:text-teal-400"><i class="fa-brands fa-telegram"></i></a>
-                <a href="#" class="hover:text-teal-400"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="#" class="hover:text-teal-400"><i class="fa-brands fa-linkedin"></i></a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-900 text-center text-[11px] text-slate-600 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Abyssinia Premium Medical Center Mockup Framework. Engineered for business verification.</p>
+            <div class="flex space-x-4 text-base">
+                <a href="#" class="hover:text-teal-400 transition-colors"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#" class="hover:text-teal-400 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Quick Telegram/WhatsApp Action Button for Local Optimization -->
-    <a href="https://t.me/#" target="_blank" class="fixed bottom-6 right-6 bg-teal-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-teal-600 transition duration-300 z-50 group">
-        <i class="fa-brands fa-telegram text-2xl group-hover:scale-110 transition duration-300"></i>
-    </a>
+
+    <!-- ========================================================= -->
+    <!--          PREMIUM INTERACTIVE AI CHAT BOT WIDGET           -->
+    <!-- ========================================================= -->
+    
+    <!-- Floating Trigger Bubble Button -->
+    <button onclick="toggleAIChat()" id="chat-trigger" class="fixed bottom-6 right-6 bg-gradient-to-tr from-teal-500 to-cyan-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-2xl shadow-teal-500/30 hover:scale-105 active:scale-95 transition-all duration-300 z-50">
+        <i class="fa-solid fa-comment-medical text-2xl" id="chat-icon"></i>
+    </button>
+
+    <!-- Main Chat Window Interface Container -->
+    <div id="ai-chat-window" class="hidden fixed bottom-24 right-6 w-[360px] sm:w-[400px] h-[520px] bg-white border border-slate-200 rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 z-50 transform scale-95 opacity-0">
+        
+        <!-- Header Panel with Clinician Profile Info -->
+        <div class="bg-slate-900 text-white p-4 flex items-center justify-between border-b border-slate-800">
+            <div class="flex items-center space-x-3">
+                <div class="relative">
+                    <div class="w-10 h-10 bg-gradient-to-tr from-teal-400 to-cyan-500 rounded-xl flex items-center justify-center text-white font-bold">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-slate-900 rounded-full"></span>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold tracking-tight">Abyssinia Health Bot</h4>
+                    <p class="text-[10px] text-teal-400 font-medium flex items-center">
+                        <span class="inline-block w-1.5 h-1.5 rounded-full bg-teal-400 mr-1 animate-pulse"></span> Virtual Assistant
+                    </p>
+                </div>
+            </div>
+            <button onclick="toggleAIChat()" class="text-slate-400 hover:text-white p-1 rounded-lg transition">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Scrollable Dialogue Thread Viewport -->
+        <div id="chat-messages-box" class="flex-1 p-4 overflow-y-auto bg-slate-50 space-y-3.5 text-xs font-medium chat-scrollbar">
+            <!-- Initial System Welcome -->
+            <div class="flex items-start space-x-2.5 max-w-[85%]">
+                <div class="w-7 h-7 bg-slate-200 text-slate-700 rounded-lg flex items-center justify-center flex-shrink-0 text-[10px]"><i class="fa-solid fa-robot"></i></div>
+                <div class="bg-white border border-slate-200 p-3 rounded-2xl rounded-tl-none shadow-sm text-slate-700 leading-relaxed">
+                    Hello! Welcome to Abyssinia Medical Center. How can I help you today? You can ask me about our **operating hours**, **available doctors**, or **where we are located** in Addis Ababa.
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Suggestions Pill Tags Quick Actions -->
+        <div class="px-4 py-2 bg-slate-50 border-t border-slate-100 flex gap-1.5 overflow-x-auto whitespace-nowrap text-[11px] font-bold chat-scrollbar">
+            <button onclick="sendQuickMessage('What are your hours?')" class="bg-white border border-slate-200 text-slate-600 px-3 py-1.5 rounded-xl hover:border-teal-500 hover:text-teal-600 shadow-sm transition">🕒 Hours</button>
+            <button onclick="sendQuickMessage('Where are you located?')" class="bg-white border border-slate-200 text-slate-600 px-3 py-1.5 rounded-xl hover:border-teal-500 hover:text-teal-600 shadow-sm transition">📍 Location</button>
+            <button onclick="sendQuickMessage('Is Dr. Dawit available?')" class="bg-white border border-slate-200 text-slate-600 px-3 py-1.5 rounded-xl hover:border-teal-500 hover:text-teal-600 shadow-sm transition">👨‍⚕️ Dr. Dawit</button>
+        </div>
+
+        <!-- Text Input Submission Field Area -->
+        <div class="p-3 bg-white border-t border-slate-100 flex items-center space-x-2">
+            <input type="text" id="chat-user-input" onkeypress="handleChatKey(event)" placeholder="Type a message or click a suggestion..." class="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-medium focus:outline-none focus:border-teal-500 transition">
+            <button onclick="processUserChat()" class="bg-teal-600 hover:bg-teal-700 text-white w-10 h-10 rounded-xl flex items-center justify-center transition shadow-md shadow-teal-600/10">
+                <i class="fa-solid fa-paper-plane text-sm"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- AI Conversational Script Layer Control Functions -->
+    <script>
+        const chatWindow = document.getElementById('ai-chat-window');
+        const chatIcon = document.getElementById('chat-icon');
+        const messageBox = document.getElementById('chat-messages-box');
+        const userInputField = document.getElementById('chat-user-input');
+
+        function toggleAIChat() {
+            if (chatWindow.classList.contains('hidden')) {
+                chatWindow.classList.remove('hidden');
+                setTimeout(() => {
+                    chatWindow.classList.remove('scale-95', 'opacity-0');
+                    chatWindow.classList.add('scale-100', 'opacity-100');
+                }, 10);
+                chatIcon.className = "fa-solid fa-chevron-down text-xl";
+            } else {
+                chatWindow.classList.remove('scale-100', 'opacity-100');
+                chatWindow.classList.add('scale-95', 'opacity-0');
+                chatIcon.className = "fa-solid fa-comment-medical text-2xl";
+                setTimeout(() => chatWindow.classList.add('hidden'), 300);
+            }
+        }
+
+        function handleChatKey(e) {
+            if (e.key === 'Enter') processUserChat();
+        }
+
+        function sendQuickMessage(text) {
+            userInputField.value = text;
+            processUserChat();
+        }
+
+        function processUserChat() {
+            const query = userInputField.value.trim();
+            if (!query) return;
+
+            // Render out user query bubble markup immediately
+            renderMessageBubble(query, 'user');
+            userInputField.value = '';
+
+            // Generate contextual pre-programmed diagnostic responses mock-up loop
+            setTimeout(() => {
+                let lowerQuery = query.toLowerCase();
+                let reply = "I'm checking that info for you. For instant confirmation, please use our main registry form or call our direct shortcode link **8222**.";
+
+                if (lowerQuery.includes('hour') || lowerQuery.includes('time') || lowerQuery.includes('open')) {
+                    reply = "Abyssinia Premium Center is open **Monday through Friday from 8:00 AM to 6:30 PM**, and **Saturdays until 3:00 PM**. Emergency trauma teams are online 24/7.";
+                } else if (lowerQuery.includes('location') || lowerQuery.includes('where') || lowerQuery.includes('bole')) {
+                    reply = "We are located at **Bole Road, right next to the Mega Building**, in Addis Ababa, Ethiopia. Secure customer parking is available on-site.";
+                } else if (lowerQuery.includes('dawit') || lowerQuery.includes('doctor') || lowerQuery.includes('cardio')) {
+                    reply = "**Dr. Dawit Alamu** (Chief Consultant Cardiologist) is currently **Available** on rotation inside the clinic today. You can secure a slot directly via the portal block below.";
+                }
+
+                renderMessageBubble(reply, 'bot');
+            }, 600);
+        }
+
+        function renderMessageBubble(text, sender) {
+            const wrap = document.createElement('div');
+            wrap.className = sender === 'user' ? "flex items-start justify-end space-x-2.5" : "flex items-start space-x-2.5 max-w-[85%]";
+            
+            const avatar = sender === 'bot' 
+                ? `<div class="w-7 h-7 bg-slate-200 text-slate-700 rounded-lg flex items-center justify-center flex-shrink-0 text-[10px]"><i class="fa-solid fa-robot"></i></div>` 
+                : '';
+
+            const bubbleBg = sender === 'user' 
+                ? "bg-teal-600 text-white rounded-tr-none" 
+                : "bg-white border border-slate-200 text-slate-700 rounded-tl-none shadow-sm";
+
+            wrap.innerHTML = `
+                ${avatar}
+                <div class="${bubbleBg} p-3 rounded-2xl leading-relaxed max-w-[85%]">
+                    ${text}
+                </div>
+            `;
+            messageBox.appendChild(wrap);
+            messageBox.scrollTop = messageBox.scrollHeight;
+        }
+    </script>
 
 </body>
 </html>
