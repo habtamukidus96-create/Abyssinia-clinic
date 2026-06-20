@@ -14,11 +14,11 @@
                 extend: {
                     colors: {
                         premium: {
-                            navy: '#0f172a', /* Dark slate used purely for sharp typography/accents */
-                            royal: '#2563eb', /* Energetic medical blue */
+                            navy: '#0f172a',
+                            royal: '#2563eb',
                             emerald: '#059669',
-                            gold: '#d97706', /* Rich deep gold contrast */
-                            platinum: '#f8fafc', /* Super clean page base background */
+                            gold: '#d97706',
+                            platinum: '#f8fafc',
                             cardBg: '#ffffff'
                         }
                     }
@@ -33,7 +33,7 @@
 </head>
 <body class="bg-premium-platinum text-slate-800 antialiased">
 
-    <!-- 🚨 EMERGENCY ACCENT HOTLINE BANNER (Sticky Top 0) -->
+    <!-- EMERGENCY HOTLINE BANNER -->
     <div class="bg-red-600 text-white text-xs font-bold py-2 px-6 sticky top-0 z-50 shadow-sm">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-2">
@@ -47,11 +47,9 @@
         </div>
     </div>
 
-    <!-- LIGHT & LUXURY NAVIGATION FRAMEWORK (Sticky Top 8) -->
+    <!-- LIGHT & LUXURY NAVIGATION FRAMEWORK -->
     <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-8 z-40 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            
-            <!-- Logo Top Left Corner -->
             <a href="#" class="flex items-center space-x-2.5">
                 <div class="bg-gradient-to-br from-blue-600 to-premium-royal text-white p-2 rounded-xl shadow-md">
                     <i class="fa-solid fa-house-medical font-bold text-lg"></i>
@@ -62,7 +60,6 @@
                 </div>
             </a>
 
-            <!-- Desktop Links -->
             <div class="hidden lg:flex items-center space-x-8 text-xs font-bold text-slate-600 uppercase tracking-wider">
                 <a href="#workflow" class="hover:text-premium-royal transition">Our Workflow</a>
                 <a href="#gallery" class="hover:text-premium-royal transition">Facilities</a>
@@ -70,14 +67,13 @@
                 <a href="#contact" class="bg-premium-royal text-white px-6 py-3 rounded-xl font-extrabold shadow-md hover:bg-blue-700 transition normal-case text-xs">Direct Inquiry Channel</a>
             </div>
 
-            <!-- Hamburger Button Top Right Corner -->
             <button id="menu-btn" class="text-2xl text-premium-navy focus:outline-none border border-slate-200 p-2 rounded-xl bg-slate-50 hover:border-premium-royal transition">
                 <i class="fa-solid fa-bars-staggered" id="menu-icon"></i>
             </button>
         </div>
     </nav>
 
-    <!-- MOBILE HAMBURGER DRAWER (BRIGHT EDITION) -->
+    <!-- MOBILE HAMBURGER DRAWER -->
     <div id="mobile-menu" class="hidden fixed bg-white border-b border-slate-200 shadow-2xl w-full left-0 z-50 top-28 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-6 grid sm:grid-cols-2 gap-8 text-xs font-bold text-slate-600 uppercase tracking-widest">
             <div class="space-y-3">
@@ -96,10 +92,12 @@
         </div>
     </div>
 
-    <!-- BRIGHT HERO REGION WITH CLEAN FILTERED LAYER -->
-    <section class="relative bg-white text-slate-900 min-h-[550px] flex items-center overflow-hidden border-b border-slate-100">
-        <!-- Slightly brightened background photo with high opacities to keep the user view readable and light -->
-        <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80'); filter: opacity(0.08) grayscale(100%);"></div>
+    <!-- BRIGHT HERO REGION WITH VISIBLE BACKGROUND -->
+    <section class="relative bg-slate-50 text-slate-900 min-h-[550px] flex items-center overflow-hidden border-b border-slate-200">
+        <!-- Clear Background image link with structured light tint overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=80" alt="Hospital Hub" class="w-full h-full object-cover opacity-15">
+        </div>
         
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-10 w-full py-12">
             <div class="space-y-4">
@@ -109,7 +107,7 @@
                 </h1>
             </div>
             
-            <!-- Structural Capacity Matrix Cards (Bright Light Version) -->
+            <!-- Capacity Matrix Cards -->
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div class="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm">
                     <span class="block text-3xl font-black text-premium-royal">10</span>
@@ -138,7 +136,7 @@
     <!-- CONTENT MODULE MATRIX -->
     <div class="max-w-7xl mx-auto px-6 py-24 space-y-32">
 
-        <!-- GET TO KNOW US & WHY CHOOSE US (Light Theme Matrix) -->
+        <!-- ABOUT SECTION -->
         <section id="about" class="grid lg:grid-cols-2 gap-12 items-start">
             <div class="bg-white p-8 lg:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-4">
                 <span class="text-xs font-bold text-premium-emerald uppercase tracking-widest bg-emerald-50 border border-emerald-100 px-3 py-1 rounded-md">Get To Know Us</span>
@@ -182,39 +180,31 @@
                 <p class="text-slate-600 text-xs">Fully staffed analytical medical blocks handling enterprise case files daily.</p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Cardiology -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 hover:border-premium-royal transition">
                     <div class="w-10 h-10 bg-blue-50 text-premium-royal rounded-xl flex items-center justify-center text-lg border border-blue-100"><i class="fa-solid fa-heart-pulse"></i></div>
                     <h4 class="font-bold text-premium-navy text-sm">Cardiology</h4>
                     <p class="text-xs text-slate-500 leading-relaxed">Advanced hemodynamic profiling, multi-tier echo assessments, and targeted vascular preventative protocols.</p>
                 </div>
-                <!-- Neurology -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 hover:border-premium-royal transition">
                     <div class="w-10 h-10 bg-blue-50 text-premium-royal rounded-xl flex items-center justify-center text-lg border border-blue-100"><i class="fa-solid fa-brain"></i></div>
                     <h4 class="font-bold text-premium-navy text-sm">Neurology</h4>
                     <p class="text-xs text-slate-500 leading-relaxed">Comprehensive tracking of central pathways, complex symptom diagnostics, and advanced nerve evaluations.</p>
                 </div>
-                <!-- General Surgery Card -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 hover:border-premium-royal transition">
-                    <div class="w-10 h-10 bg-blue-50 text-premium-royal rounded-xl flex items-center justify-center text-lg border border-blue-100">
-                        <i class="fa-solid fa-scissors text-premium-royal"></i>
-                    </div>
+                    <div class="w-10 h-10 bg-blue-50 text-premium-royal rounded-xl flex items-center justify-center text-lg border border-blue-100"><i class="fa-solid fa-scissors"></i></div>
                     <h4 class="font-bold text-premium-navy text-sm">General Surgery</h4>
                     <p class="text-xs text-slate-500 leading-relaxed">Minimally invasive approaches, high-sterility operating environments, and dedicated post-op oversight.</p>
                 </div>
-                <!-- Internal Medicine -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 hover:border-premium-royal transition">
                     <div class="w-10 h-10 bg-blue-50 text-premium-royal rounded-xl flex items-center justify-center text-lg border border-blue-100"><i class="fa-solid fa-capsules"></i></div>
                     <h4 class="font-bold text-premium-navy text-sm">Internal Medicine</h4>
                     <p class="text-xs text-slate-500 leading-relaxed">Systemic tracking logs, chronic disease management frameworks, and tailored holistic metabolic oversight.</p>
                 </div>
-                <!-- Radiology -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 hover:border-premium-royal transition">
                     <div class="w-10 h-10 bg-blue-50 text-premium-royal rounded-xl flex items-center justify-center text-lg border border-blue-100"><i class="fa-solid fa-x-ray"></i></div>
                     <h4 class="font-bold text-premium-navy text-sm">Radiology Node</h4>
                     <p class="text-xs text-slate-500 leading-relaxed">High-definition digital radiography metrics, precise ultrasound scans, and advanced visual structural mapping.</p>
                 </div>
-                <!-- Emergency Care -->
                 <div class="bg-red-50 p-6 rounded-2xl border border-red-100 shadow-sm space-y-3">
                     <div class="w-10 h-10 bg-red-600 text-white rounded-xl flex items-center justify-center text-lg"><i class="fa-solid fa-kit-medical"></i></div>
                     <h4 class="font-bold text-red-900 text-sm">Emergency Department</h4>
@@ -223,7 +213,7 @@
             </div>
         </section>
 
-        <!-- CLINICAL OPERATIONS WORKFLOW MATRIX -->
+        <!-- WORKFLOW MATRIX -->
         <section id="workflow" class="grid lg:grid-cols-12 gap-12 items-stretch">
             <div class="lg:col-span-7 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-8">
                 <div>
@@ -254,7 +244,6 @@
                 </div>
             </div>
 
-            <!-- What To Bring Block (Bright Layout) -->
             <div class="lg:col-span-5 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6 flex flex-col justify-between">
                 <div class="space-y-4">
                     <h3 class="text-xl font-bold text-premium-navy tracking-tight"><i class="fa-solid fa-clipboard-list mr-2 text-premium-royal"></i> What To Bring</h3>
@@ -273,7 +262,7 @@
             </div>
         </section>
 
-        <!-- SCHEDULES CHART NODE -->
+        <!-- SCHEDULES CHART -->
         <section id="hours" class="bg-white rounded-3xl border border-slate-200 p-8 lg:p-10 shadow-sm space-y-8">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
@@ -291,39 +280,41 @@
             </div>
         </section>
 
-        <!-- TOURS GALLERY (UPDATED: RE-ASSIGNED TO HIGH CONTRAST BLACK EAST AFRICAN FEMALE MEDICAL PROFESSIONAL) -->
+        <!-- TOURS GALLERY (FIXED STABLE IMAGES) -->
         <section id="gallery" class="space-y-8">
             <div class="text-center max-w-2xl mx-auto space-y-2">
                 <h2 class="text-3xl font-extrabold text-premium-navy tracking-tight">Take a Tour of Our Facilities</h2>
                 <p class="text-slate-500 text-xs">Meet our expert team and explore the advanced technology we use to provide exceptional healthcare.</p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- HIGH QUALITY EAST AFRICAN BLACK FEMALE CLINICAL PROFESSIONAL PORTRAIT -->
-                <div class="group relative rounded-2xl overflow-hidden shadow-md border border-slate-100">
-                    <img src="https://images.unsplash.com/photo-1594824497964-58615b41637b?auto=format&fit=crop&w=450&h=320&q=80" alt="Consultant Physician Specialist" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent p-4 flex flex-col justify-end text-white">
+                <!-- AUTHENTIC EAST AFRICAN BLACK FEMALE CLINICAL PROFESSIONAL -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-slate-100">
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=500&h=380&q=80" alt="Consultant Physician Specialist" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent p-4 flex flex-col justify-end text-white">
                         <span class="text-[10px] font-bold tracking-widest text-amber-400 uppercase">Expert Team</span>
-                        <h4 class="font-bold text-sm">Consultant Physician Matrix</h4>
+                        <h4 class="font-bold text-sm">Consultant Medical Expert</h4>
                     </div>
                 </div>
-                <div class="group relative rounded-2xl overflow-hidden shadow-md border border-slate-100">
-                    <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=450&h=320&q=80" alt="Advanced Laboratory Core" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent p-4 flex flex-col justify-end text-white">
+                <!-- MOLECULAR DIAGNOSTICS LAB -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-slate-100">
+                    <img src="https://images.unsplash.com/photo-1579154204601-01588f351167?auto=format&fit=crop&w=500&h=380&q=80" alt="Advanced Laboratory Core" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent p-4 flex flex-col justify-end text-white">
                         <span class="text-[10px] font-bold tracking-widest text-amber-400 uppercase">Diagnostics</span>
-                        <h4 class="font-bold text-sm">Molecular Automated Lab Core</h4>
+                        <h4 class="font-bold text-sm">Automated Lab Core</h4>
                     </div>
                 </div>
-                <div class="group relative rounded-2xl overflow-hidden shadow-md border border-slate-100">
-                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=450&h=320&q=80" alt="High-Dependency Care Unit Space" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent p-4 flex flex-col justify-end text-white">
+                <!-- HOSPITAL BED INFRASTRUCTURE -->
+                <div class="group relative rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-slate-100">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=500&h=380&q=80" alt="High-Dependency Care Unit Space" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent p-4 flex flex-col justify-end text-white">
                         <span class="text-[10px] font-bold tracking-widest text-amber-400 uppercase">In-Patient Node</span>
-                        <h4 class="font-bold text-sm">Premium Clinical Bed Framework</h4>
+                        <h4 class="font-bold text-sm">Premium Clinical Suites</h4>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT ARCHITECTURE & ACTIVE LIVE EM-BED MAP NODE -->
+        <!-- CONTACT & LIVE MAP -->
         <section id="contact" class="grid lg:grid-cols-12 gap-12 items-start">
             <div class="lg:col-span-7 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
                 <div>
@@ -365,7 +356,6 @@
                 </form>
             </div>
 
-            <!-- Contact Context Details Block (Bright Theme Version) -->
             <div class="lg:col-span-5 space-y-6">
                 <div class="bg-white border border-slate-200 p-6 rounded-3xl space-y-4 shadow-sm">
                     <h4 class="text-premium-royal font-bold text-xs uppercase tracking-widest border-b border-slate-100 pb-2">Direct Contact Node</h4>
@@ -375,7 +365,6 @@
                         <p class="flex items-start"><i class="fa-solid fa-location-dot text-premium-royal mr-3 text-sm mt-0.5"></i> Bole Sub-City, Africa Avenue,<br>Addis Ababa, Ethiopia</p>
                     </div>
                 </div>
-                <!-- Fully responsive embedded interactive map centered perfectly -->
                 <div class="rounded-3xl overflow-hidden shadow-sm border border-slate-200 h-64 bg-slate-100 relative">
                     <iframe class="w-full h-full border-0 absolute inset-0" src="https://maps.google.com/maps?q=Africa%20Avenue,%20Addis%20Ababa,%20Ethiopia&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
                 </div>
@@ -384,7 +373,7 @@
 
     </div>
 
-    <!-- CLEAN COHESIVE FOOTER -->
+    <!-- FOOTER -->
     <footer class="bg-white text-slate-600 text-xs py-16 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 font-medium">
             <div class="space-y-4">
@@ -429,7 +418,7 @@
         </div>
     </footer>
 
-    <!-- INTERACTIVE EVENT DRIVERS SCRIPTS RUNTIME -->
+    <!-- RUNTIME MOBILE NAV SCRIPT -->
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
