@@ -3,520 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abyssinia HealthSuite Pro | Clinical Enterprise Management</title>
-    <!-- Tailwind CSS Engine -->
+    <title>Abyssinia HealthSuite | Premium Clinical Care</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Premium Icon Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .chat-scrollbar::-webkit-scrollbar { width: 4px; }
-        .chat-scrollbar::-webkit-scrollbar-track { background: transparent; }
-        .chat-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-    </style>
-</head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-teal-500 selection:text-white">
-
-    <!-- 🚨 EMERGENCY STICKY BANNER (Requirement 9) -->
-    <div class="bg-red-600 text-white text-xs font-bold py-2 px-4 sticky top-0 z-50 shadow-md">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-2 animate-pulse">
-                <i class="fa-solid fa-circle-exclamation text-sm"></i>
-                <span>24/7 EMERGENCY TRUAMA CORE ACTIVE</span>
-            </div>
-            <a href="tel:8222" class="bg-white text-red-700 px-3 py-1 rounded-lg text-[11px] font-extrabold uppercase tracking-wider hover:bg-red-50 transition">
-                <i class="fa-solid fa-phone mr-1.5"></i> Call Shortcode: 8222
-            </a>
-        </div>
-    </div>
-
-    <!-- MAIN CONTROL ARCHITECTURE NAVIGATION Header -->
-    <header class="bg-white border-b border-slate-200/80 sticky top-8 z-40 shadow-sm backdrop-blur-md bg-white/90">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="bg-gradient-to-br from-teal-500 to-cyan-600 text-white p-2.5 rounded-xl shadow-lg">
-                    <i class="fa-solid fa-square-h text-xl"></i>
-                </div>
-                <div>
-                    <span class="text-lg font-extrabold text-slate-900 tracking-tight block uppercase">Abyssinia HealthSuite</span>
-                    <span class="text-[10px] text-teal-600 font-bold uppercase tracking-widest block -mt-0.5">Enterprise Platform</span>
-                </div>
-            </div>
-
-            <!-- VIEWPORT ARCHITECTURE SWITCHER TABS (Requirement 11, 12, 13) -->
-            <div class="bg-slate-100 p-1 rounded-xl flex items-center space-x-1 border border-slate-200/60 text-xs font-bold">
-                <button onclick="switchSystemTab('patient-frontend')" id="btn-patient-frontend" class="tab-btn px-4 py-2 rounded-lg bg-white text-teal-600 shadow-sm transition-all duration-200">
-                    <i class="fa-solid fa-desktop mr-1.5"></i> Patient Website
-                </button>
-                <button onclick="switchSystemTab('admin-dashboard')" id="btn-admin-dashboard" class="tab-btn px-4 py-2 rounded-lg text-slate-600 hover:text-slate-900 transition-all duration-200">
-                    <i class="fa-solid fa-lock mr-1.5"></i> Clinic Admin Panel
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- ========================================================= -->
-    <!-- PANEL 1: PATIENT PUBLIC LAYOUT (Requirement 1 - 10)       -->
-    <!-- ========================================================= -->
-    <main id="tab-patient-frontend" class="system-tab-content block">
-        
-        <!-- 🏠 HERO INTERFACE FRAMEWORK (Requirement 1) -->
-        <section class="bg-gradient-to-b from-slate-100 via-white to-slate-50 pt-12 pb-20 overflow-hidden relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center relative z-10">
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <span class="inline-flex items-center space-x-1.5 bg-teal-50 border border-teal-100 text-teal-800 px-3 py-1.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-sm">
-                        <i class="fa-solid fa-award text-teal-500"></i>
-                        <span>Ministry of Health Certified Hub</span>
-                    </span>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                        Quality Healthcare <br><span class="bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">You Can True and Depend On.</span>
-                    </h1>
-                    <p class="text-slate-500 text-base max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                        Abyssinia Premium Clinic combines world-class diagnostic modalities with elite local specialists to deliver medical infrastructure right here in Addis Ababa.
-                    </p>
-                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                        <a href="#appointment-system" class="bg-teal-600 hover:bg-teal-700 text-white font-bold text-center px-8 py-4 rounded-xl shadow-lg transition duration-200">
-                            Book Appointment Now
-                        </a>
-                        <a href="tel:8222" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-center px-8 py-4 rounded-xl shadow-md transition duration-200">
-                            Emergency Shortcode: 8222
-                        </a>
-                    </div>
-                </div>
-                <div class="lg:col-span-5">
-                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="Modern Clinic Modality" class="w-full h-[350px] object-cover rounded-3xl shadow-xl border border-white ring-4 ring-slate-100">
-                </div>
-            </div>
-        </section>
-
-        <!-- 👨‍⚕️ ABOUT CLINIC MODULE (Requirement 2) -->
-        <section id="about" class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-4">
-                    <span class="text-xs font-bold text-teal-600 uppercase tracking-widest bg-teal-50 px-3 py-1 rounded-md">Our Mission</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Setting New Standards for Ethiopian Medical Care</h2>
-                    <p class="text-slate-500 text-sm leading-relaxed">
-                        Founded with a vision to bring premium, diagnostics-driven healthcare to East Africa, Abyssinia Medical Center stands as a modern infrastructure beacon along Africa Avenue. We bridge the gap between advanced medical science and community care.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-100">
-                        <div>
-                            <h4 class="text-sm font-bold text-slate-900"><i class="fa-solid fa-microscope text-teal-500 mr-2"></i> Modern Equipment</h4>
-                            <p class="text-xs text-slate-400 mt-1">High-definition digital radiology, ultrasound arrays, and real-time labs.</p>
-                        </div>
-                        <div>
-                            <h4 class="text-sm font-bold text-slate-900"><i class="fa-solid fa-user-doctor text-teal-500 mr-2"></i> Experienced Staff</h4>
-                            <p class="text-xs text-slate-400 mt-1">Certified physicians with international clinical specialization histories.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200/60 space-y-4 shadow-sm">
-                    <h3 class="text-lg font-bold text-slate-900">Why Patients Choose Us</h3>
-                    <ul class="space-y-3 text-xs font-semibold text-slate-600">
-                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-teal-500 mr-2.5 text-base"></i> Direct integration with Telebirr & CBE Birr APIs</li>
-                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-teal-500 mr-2.5 text-base"></i> Instant diagnostic reporting delivery via secure SMS</li>
-                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-teal-500 mr-2.5 text-base"></i> Comprehensive 24 Hours active emergency infrastructure</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 🩺 CORE SERVICES GRID (Requirement 3) -->
-        <section id="services" class="py-20 bg-slate-50 border-t border-b border-slate-200/60">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
-                    <span class="text-xs font-bold text-teal-600 uppercase tracking-widest bg-teal-100/60 px-3 py-1 rounded-md">Departments</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Our Specialized Offerings</h2>
-                    <p class="text-slate-500 text-sm">Comprehensive medical profiles handled using elite diagnostic protocols right inside the capital.</p>
-                </div>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service 1 -->
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm space-y-4">
-                        <div class="w-10 h-10 bg-teal-50 rounded-xl text-teal-600 flex items-center justify-center text-lg"><i class="fa-solid fa-stethoscope"></i></div>
-                        <h4 class="text-base font-bold text-slate-900">General Consultation</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">Comprehensive symptom assessment, routine preventative reviews, and holistic health tracking.</p>
-                    </div>
-                    <!-- Service 2 -->
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm space-y-4">
-                        <div class="w-10 h-10 bg-blue-50 rounded-xl text-blue-600 flex items-center justify-center text-lg"><i class="fa-solid fa-baby"></i></div>
-                        <h4 class="text-base font-bold text-slate-900">Pediatric Care Unit</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">Dedicated monitoring, child development screening schedules, and modern immunization management.</p>
-                    </div>
-                    <!-- Service 3 -->
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm space-y-4">
-                        <div class="w-10 h-10 bg-purple-50 rounded-xl text-purple-600 flex items-center justify-center text-lg"><i class="fa-solid fa-tooth"></i></div>
-                        <h4 class="text-base font-bold text-slate-900">Dental Practice</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">Advanced restoration services, preventative visual checkups, and surgical dental protocols.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 👨‍⚕️ CLINICAL EXPERT STAFF SECTION (Requirement 4) -->
-        <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
-                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Our Senior Medical Specialists</h2>
-                    <p class="text-slate-500 text-sm">Empathetic care backed by years of rigorous clinical deployment.</p>
-                </div>
-                <div class="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200/60 flex items-center space-x-4">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=150&h=150&q=80" alt="Doctor" class="w-20 h-20 object-cover rounded-xl shadow-sm">
-                        <div>
-                            <h4 class="text-base font-bold text-slate-900">Dr. Dawit Alamu</h4>
-                            <p class="text-xs text-teal-600 font-semibold">Chief Consultant Cardiologist</p>
-                            <p class="text-[11px] text-slate-400 mt-1">14+ Years Active Clinical Exp.</p>
-                        </div>
-                    </div>
-                    <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200/60 flex items-center space-x-4">
-                        <img src="https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&w=150&h=150&q=80" alt="Doctor" class="w-20 h-20 object-cover rounded-xl shadow-sm">
-                        <div>
-                            <h4 class="text-base font-bold text-slate-900">Dr. Helen Tsegaye</h4>
-                            <p class="text-xs text-teal-600 font-semibold">Senior Pediatric Specialist</p>
-                            <p class="text-[11px] text-slate-400 mt-1">9+ Years Active Clinical Exp.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 📅 CONVERSION APPOINTMENT SYSTEM (Requirement 5) -->
-        <section id="appointment-system" class="py-20 bg-slate-900 text-white relative overflow-hidden">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center space-y-3 mb-12">
-                    <span class="text-xs font-bold uppercase tracking-widest text-teal-400">Secure Registration</span>
-                    <h2 class="text-3xl font-extrabold tracking-tight">Patient Registry & Intake Portal</h2>
-                    <p class="text-slate-400 text-xs">Automated SMS validation notifications will route directly to your device upon review submission.</p>
-                </div>
-                <div class="bg-white text-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-700/50">
-                    <form onsubmit="handlePatientFormSubmit(event)" id="patient-intake-form" class="space-y-4">
-                        <div class="grid sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Full Legal Name</label>
-                                <input type="text" required id="form-name" placeholder="Abebe Kebede" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-teal-500">
-                            </div>
-                            <div>
-                                <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Phone Number</label>
-                                <input type="tel" required id="form-phone" placeholder="+251 9XX XXX XXX" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-teal-500">
-                            </div>
-                        </div>
-                        <div class="grid sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Medical Department</label>
-                                <select id="form-service" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-teal-500 bg-white">
-                                    <option>General Consultation</option>
-                                    <option>Pediatric Assessment Profile</option>
-                                    <option>Advanced Metabolic Diagnostics</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Target Date</label>
-                                <input type="date" required id="form-date" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-teal-500 text-slate-500">
-                            </div>
-                        </div>
-                        <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 rounded-xl transition duration-200 text-xs uppercase tracking-wider shadow-lg shadow-teal-600/10 mt-2">
-                            Transmit Appointment Request
-                        </button>
-                    </form>
-                    <div id="form-success-banner" class="hidden mt-4 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-800 text-xs font-bold flex items-center space-x-2">
-                        <i class="fa-solid fa-circle-check text-sm text-emerald-600"></i>
-                        <span>System Notice: Intake successfully processed! Entry piped directly to Admin Dashboard view layer above.</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ⭐ TESTIMONIALS & SOCIAL PROOF (Requirement 8) -->
-        <section class="py-20 bg-white border-b border-slate-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-2xl mx-auto mb-12">
-                    <h2 class="text-2xl font-extrabold text-slate-900">Trusted by Local Families</h2>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-xs font-medium text-slate-600">
-                    <div class="p-6 bg-slate-50 border border-slate-200/60 rounded-2xl space-y-3">
-                        <div class="text-amber-500 flex space-x-0.5 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        <p class="leading-relaxed">"The diagnostic speed here is amazing. I received my laboratory profile charts directly inside my Telegram app within hours of the screening evaluation."</p>
-                        <span class="block text-slate-900 font-bold text-[11px] uppercase tracking-wider">— Almaz Tekle</span>
-                    </div>
-                    <div class="p-6 bg-slate-50 border border-slate-200/60 rounded-2xl space-y-3">
-                        <div class="text-amber-500 flex space-x-0.5 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        <p class="leading-relaxed">"Extremely professional. Dr. Dawit spent time running complete diagnostic explanations instead of rushing me out of the exam consultation cube."</p>
-                        <span class="block text-slate-900 font-bold text-[11px] uppercase tracking-wider">— Yohannes Alamu</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 📍 DETAILED LOCAL CONTACT FRAMEWORK (Requirement 7) -->
-        <footer class="bg-slate-950 text-slate-400 py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-12 text-xs">
-                <div class="space-y-4">
-                    <h4 class="text-white font-extrabold uppercase tracking-widest text-[10px]">Abyssinia Premium Hub</h4>
-                    <p class="leading-relaxed text-slate-500">Premium digital healthcare execution preview built custom for enterprise clinics looking to expand workflow reach in Addis Ababa.</p>
-                </div>
-                <div class="space-y-2">
-                    <h4 class="text-white font-extrabold uppercase tracking-widest text-[10px]">Operational Schema</h4>
-                    <p>Monday - Friday: <span class="text-teal-400 font-bold">8:00 AM - 6:30 PM</span></p>
-                    <p>Saturday: <span class="text-teal-400 font-bold">8:00 AM - 3:00 PM</span></p>
-                    <p class="text-red-400 font-bold">Sundays / Holidays: Emergency Core Only</p>
-                </div>
-                <div class="space-y-2">
-                    <h4 class="text-white font-extrabold uppercase tracking-widest text-[10px]">Physical Coordinate</h4>
-                    <p class="leading-relaxed">Bole Sub-City, Ward 02,<br>Africa Avenue / Bole Road, Near Mega Building,<br>Addis Ababa, Ethiopia</p>
-                </div>
-            </div>
-        </footer>
-    </main>
-
-    <!-- ========================================================= -->
-    <!-- PANEL 2: ADMIN MANAGEMENT HUB (Requirement 11, 12, 13)    -->
-    <!-- ========================================================= -->
-    <main id="tab-admin-dashboard" class="system-tab-content hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="bg-white border border-slate-200 rounded-3xl p-6 lg:p-8 shadow-xl space-y-6">
-            
-            <!-- Dashboard Sub Header Profile -->
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-6 border-b border-slate-100">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-teal-600">Secure Core Panel</span>
-                    <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight">Clinic Intake Registry Console</h2>
-                </div>
-                <div class="flex items-center space-x-3 bg-slate-50 border border-slate-200 px-3.5 py-2 rounded-xl text-xs font-bold text-slate-700">
-                    <i class="fa-solid fa-lock text-emerald-500"></i>
-                    <span>Authorized Session: Admin Mode Active</span>
-                </div>
-            </div>
-
-            <!-- Operational Metric Matrix Counters -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="p-4 bg-slate-50 border border-slate-200/60 rounded-2xl">
-                    <span class="block text-slate-400 text-[10px] font-bold uppercase tracking-wider">Total Queue Inputs</span>
-                    <span class="text-2xl font-extrabold text-slate-900 mt-1 block" id="meta-count-total">3</span>
-                </div>
-                <div class="p-4 bg-slate-50 border border-slate-200/60 rounded-2xl">
-                    <span class="block text-slate-400 text-[10px] font-bold uppercase tracking-wider">Approved Slots</span>
-                    <span class="text-2xl font-extrabold text-emerald-600 mt-1 block">2</span>
-                </div>
-                <div class="p-4 bg-slate-50 border border-slate-200/60 rounded-2xl">
-                    <span class="block text-slate-400 text-[10px] font-bold uppercase tracking-wider">Pending Audit</span>
-                    <span class="text-2xl font-extrabold text-amber-500 mt-1 block" id="meta-count-pending">1</span>
-                </div>
-                <div class="p-4 bg-teal-900 text-teal-100 rounded-2xl">
-                    <span class="block text-teal-400 text-[10px] font-bold uppercase tracking-wider">SaaS Tier Status</span>
-                    <span class="text-sm font-bold text-white mt-1.5 block flex items-center"><i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i> Enterprise Active</span>
-                </div>
-            </div>
-
-            <!-- Interactive Dynamic Intake Ledger / Grid Database Mockup -->
-            <div class="overflow-x-auto border border-slate-100 rounded-2xl">
-                <table class="w-full text-left border-collapse text-xs">
-                    <thead>
-                        <tr class="bg-slate-50 text-slate-400 font-bold uppercase border-b border-slate-100 text-[10px] tracking-wider">
-                            <th class="p-4">Patient Profile Node</th>
-                            <th class="p-4">Phone Connection</th>
-                            <th class="p-4">Target Specialty</th>
-                            <th class="p-4">Scheduled Date</th>
-                            <th class="p-4 text-right">Operational Status</th>
-                        </tr>
-                    </thead>
-                    <tbody id="admin-table-body" class="font-medium text-slate-700 divide-y divide-slate-50">
-                        <!-- Default Seed Data Item 1 -->
-                        <tr>
-                            <td class="p-4 font-bold text-slate-900">Ayalew Mekonnen</td>
-                            <td class="p-4">+251 911 445 221</td>
-                            <td class="p-4">Cardiological Assessment Profile</td>
-                            <td class="p-4">2026-06-22</td>
-                            <td class="p-4 text-right"><span class="px-2.5 py-1 bg-emerald-100 text-emerald-800 rounded-md font-bold text-[10px] uppercase">Approved</span></td>
-                        </tr>
-                        <!-- Default Seed Data Item 2 -->
-                        <tr>
-                            <td class="p-4 font-bold text-slate-900">Chaltu Ibrahim</td>
-                            <td class="p-4">+251 920 885 331</td>
-                            <td class="p-4">Pediatric Consultation Unit</td>
-                            <td class="p-4">2026-06-23</td>
-                            <td class="p-4 text-right"><span class="px-2.5 py-1 bg-emerald-100 text-emerald-800 rounded-md font-bold text-[10px] uppercase">Approved</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- ========================================================= -->
-    <!-- 💬 6. AI CONVERSATIONAL TRIAGE CHAT MODULE                -->
-    <!-- ========================================================= -->
-    <button onclick="toggleAIChatWindow()" id="chat-trigger-bubble" class="fixed bottom-6 right-6 bg-gradient-to-tr from-teal-500 to-cyan-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-2xl z-50 transition-all active:scale-95 duration-200">
-        <i class="fa-solid fa-comment-medical text-2xl" id="chat-trigger-icon"></i>
-    </button>
-
-    <div id="ai-chat-container" class="hidden fixed bottom-24 right-6 w-[360px] sm:w-[400px] h-[520px] bg-white border border-slate-200 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-50 transition-all duration-300 transform scale-95 opacity-0">
-        <!-- Chat Executive Brand Bar -->
-        <div class="bg-slate-900 text-white p-4 flex items-center justify-between border-b border-slate-800">
-            <div class="flex items-center space-x-3">
-                <div class="w-9 h-9 bg-teal-500 rounded-xl flex items-center justify-center text-white text-base"><i class="fa-solid fa-robot"></i></div>
-                <div>
-                    <h4 class="text-sm font-bold tracking-tight">Abyssinia HealthSuite AI</h4>
-                    <p class="text-[10px] text-teal-400 font-semibold flex items-center"><span class="h-1.5 w-1.5 bg-emerald-400 rounded-full mr-1 animate-pulse"></span> Virtual Diagnostic Triage</p>
-                </div>
-            </div>
-            <button onclick="toggleAIChatWindow()" class="text-slate-400 hover:text-white transition"><i class="fa-solid fa-xmark text-lg"></i></button>
-        </div>
-
-        <!-- Chat Stream Dialog Area -->
-        <div id="chat-dialogue-viewport" class="flex-1 p-4 overflow-y-auto bg-slate-50 space-y-3.5 text-xs font-medium chat-scrollbar">
-            <div class="flex items-start space-x-2.5 max-w-[85%]">
-                <div class="w-6 h-6 bg-slate-200 text-slate-700 rounded-lg flex items-center justify-center text-[10px] flex-shrink-0"><i class="fa-solid fa-robot"></i></div>
-                <div class="bg-white border border-slate-200 p-3 rounded-2xl rounded-tl-none shadow-sm leading-relaxed text-slate-700">
-                    Hello, I am the HealthSuite virtual care bot. I can answer inquiries regarding **hours**, **location**, or walk you through our **symptom triage checker**. What concerns you today?
-                </div>
-            </div>
-        </div>
-
-        <!-- Suggestion Shortcuts Grid Frame -->
-        <div class="px-4 py-2 bg-slate-50 border-t border-slate-100 flex gap-1.5 overflow-x-auto text-[10px] font-bold chat-scrollbar">
-            <button onclick="injectPresetQuery('Check symptoms (Triage)')" class="bg-white border border-slate-200 px-2.5 py-1.5 rounded-xl hover:border-teal-500 transition shadow-sm text-slate-600">🌡️ Symptom Triage</button>
-            <button onclick="injectPresetQuery('What are your hours?')" class="bg-white border border-slate-200 px-2.5 py-1.5 rounded-xl hover:border-teal-500 transition shadow-sm text-slate-600">🕒 Hours</button>
-            <button onclick="injectPresetQuery('Where are you located?')" class="bg-white border border-slate-200 px-2.5 py-1.5 rounded-xl hover:border-teal-500 transition shadow-sm text-slate-600">📍 Location</button>
-        </div>
-
-        <!-- Submission Bar Block -->
-        <div class="p-3 bg-white border-t border-slate-100 flex items-center space-x-2">
-            <input type="text" id="chat-input-node" onkeypress="catchInputEnter(event)" placeholder="Ask about clinic hours, location, triage..." class="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-teal-500 font-medium text-slate-700">
-            <button onclick="commitUserTextMessage()" class="bg-teal-600 hover:bg-teal-700 text-white w-10 h-10 rounded-xl flex items-center justify-center transition shadow-md shadow-teal-600/10">
-                <i class="fa-solid fa-paper-plane text-xs"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- UTILITY CONTROL SCRIPTS LOGIC ENGINE -->
     <script>
-        // System Wide Routing State Machine Router
-        function switchSystemTab(targetTabId) {
-            document.querySelectorAll('.system-tab-content').forEach(element => element.classList.add('hidden'));
-            document.getElementById('tab-' + targetTabId).classList.remove('hidden');
-
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('bg-white', 'text-teal-600', 'shadow-sm');
-                btn.classList.add('text-slate-600');
-            });
-            const targetedButton = document.getElementById('btn-' + targetTabId);
-            targetedButton.classList.remove('text-slate-600');
-            targetedButton.classList.add('bg-white', 'text-teal-600', 'shadow-sm');
-        }
-
-        // Intake Form Piping Registry Pipeline Simulation
-        let activeSubmissionCount = 2;
-        function handlePatientFormSubmit(event) {
-            event.preventDefault();
-            
-            const clientName = document.getElementById('form-name').value;
-            const clientPhone = document.getElementById('form-phone').value;
-            const clientService = document.getElementById('form-service').value;
-            const clientDate = document.getElementById('form-date').value;
-
-            // Pipeline Data Injection Row creation
-            const tableLedgerBody = document.getElementById('admin-table-body');
-            const dataRowElement = document.createElement('tr');
-            dataRowElement.className = "bg-amber-50/40 animate-fade-in";
-            dataRowElement.innerHTML = `
-                <td class="p-4 font-bold text-slate-900">${clientName}</td>
-                <td class="p-4">${clientPhone}</td>
-                <td class="p-4">${clientService}</td>
-                <td class="p-4">${clientDate}</td>
-                <td class="p-4 text-right"><span class="px-2.5 py-1 bg-amber-100 text-amber-800 rounded-md font-bold text-[10px] uppercase">Pending Review</span></td>
-            `;
-            tableLedgerBody.appendChild(dataRowElement);
-
-            // Mutate Matrix counters
-            activeSubmissionCount++;
-            document.getElementById('meta-count-total').innerText = activeSubmissionCount;
-            document.getElementById('meta-count-pending').innerText = "2";
-
-            // Reset Form Layer and show immediate system confirmation banner
-            document.getElementById('patient-intake-form').reset();
-            const successNotificationBanner = document.getElementById('form-success-banner');
-            successNotificationBanner.classList.remove('hidden');
-            setTimeout(() => successNotificationBanner.classList.add('hidden'), 6000);
-        }
-
-        // Chatbot Visibility Toggle Manager
-        const chatBoxContainer = document.getElementById('ai-chat-container');
-        const floatingIconTrigger = document.getElementById('chat-trigger-icon');
-
-        function toggleAIChatWindow() {
-            if (chatBoxContainer.classList.contains('hidden')) {
-                chatBoxContainer.classList.remove('hidden');
-                setTimeout(() => {
-                    chatBoxContainer.classList.remove('scale-95', 'opacity-0');
-                    chatBoxContainer.classList.add('scale-100', 'opacity-100');
-                }, 10);
-                floatingIconTrigger.className = "fa-solid fa-chevron-down text-xl";
-            } else {
-                chatBoxContainer.classList.remove('scale-100', 'opacity-100');
-                chatBoxContainer.classList.add('scale-95', 'opacity-0');
-                floatingIconTrigger.className = "fa-solid fa-comment-medical text-2xl";
-                setTimeout(() => chatBoxContainer.classList.add('hidden'), 300);
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinic: {
+                            navy: '#0f172a',
+                            emerald: '#059669',
+                            soft: '#f8fafc'
+                        }
+                    }
+                }
             }
         }
+    </script>
+</head>
+<body class="bg-clinic-soft text-slate-800">
 
-        function catchInputEnter(event) {
-            if (event.key === 'Enter') commitUserTextMessage();
-        }
-
-        function injectPresetQuery(textString) {
-            document.getElementById('chat-input-node').value = textString;
-            commitUserTextMessage();
-        }
-
-        // AI Conversational Core Processing Matrix Mockup Layer
-        function commitUserTextMessage() {
-            const textInputField = document.getElementById('chat-input-node');
-            const processedTextString = textInputField.value.trim();
-            if (!processedTextString) return;
-
-            appendChatBubbleElement(processedTextString, 'user');
-            textInputField.value = '';
-
-            setTimeout(() => {
-                let lowerTextVal = processedTextString.toLowerCase();
-                let outputResponseString = "I have recorded that input tracking detail. For secure medical files, kindly access our appointment hub form matrix or contact our emergency core directly via shortcode phone link **8222**.";
-
-                if (lowerTextVal.includes('hour') || lowerTextVal.includes('open') || lowerTextVal.includes('time')) {
-                    outputResponseString = "Abyssinia Premium Hub operational metrics: **Monday-Friday 8:00 AM - 6:30 PM**, and **Saturdays until 3:00 PM**. Emergency trauma teams are available 24 hours.";
-                } else if (lowerTextVal.includes('location') || lowerTextVal.includes('where') || lowerTextVal.includes('bole')) {
-                    outputResponseString = "Our facility coordinate layer is localized on **Bole Road, adjacent to the Mega Building structure**, inside Addis Ababa, Ethiopia.";
-                } else if (lowerTextVal.includes('triage') || lowerTextVal.includes('symptom') || lowerTextVal.includes('check')) {
-                    outputResponseString = "**Symptom Checker System Activated:** If you are experiencing chest localized pain, severe breathing reduction, or sudden high trauma, please use shortcode phone node **8222** immediately. Otherwise, please detail your primary discomfort profile here (e.g., fever, chronic toothache).";
-                } else if (lowerTextVal.includes('fever') || lowerTextVal.includes('cough')) {
-                    outputResponseString = "**Triage Processing Result:** Mild systemic infection profile suspected. We recommend scheduling an operational visit with our **General Consultation Unit** today. Dr. Dawit is currently on active rotation.";
-                }
-
-                appendChatBubbleElement(outputResponseString, 'bot');
-            }, 600);
-        }
-
-        function appendChatBubbleElement(text, senderId) {
-            const dialogBoxViewport = document.getElementById('chat-dialogue-viewport');
-            const bubbleWrapperNode = document.createElement('div');
-            bubbleWrapperNode.className = senderId === 'user' ? "flex items-start justify-end space-x-2.5" : "flex items-start space-x-2.5 max-w-[85%]";
+    <!-- 1. REFINED LUXURY HEADER -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             
-            const profileAvatarNode = senderId === 'bot' 
-                ? `<div class="w-6 h-6 bg-slate-200 text-slate-700 rounded-lg flex items-center justify-center text-[10px] flex-shrink-0"><i class="fa-solid fa-robot"></i></div>` 
-                : '';
-
-            const internalBubbleStyling = senderId === 'user' 
-                ? "bg-teal-600 text-white rounded-tr-none" 
-                : "bg-white border border-slate-200 text-slate-700 rounded-tl-none shadow-sm";
-
-            bubbleWrapperNode.innerHTML = `
-                ${profileAvatarNode}
-                <div class="${internalBubbleStyling} p-3 rounded-2xl leading-relaxed max-w-[85%]">
-                    ${text}
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <div class="bg-clinic-emerald text-white p-2 rounded-lg">
+                    <i class="fa-solid fa-plus font-bold"></i>
                 </div>
-            `;
-            dialogBoxViewport.appendChild(bubbleWrapperNode);
-            dialogBoxViewport.scrollTop = dialogBoxViewport.scrollHeight;
-        }
+                <span class="text-xl font-bold tracking-tight text-clinic-navy">ABYSSINIA<span class="font-light text-slate-400">CLINIC</span></span>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                <a href="#" class="hover:text-clinic-emerald transition">Services</a>
+                <a href="#" class="hover:text-clinic-emerald transition">Doctors</a>
+                <a href="#" class="hover:text-clinic-emerald transition">Locations</a>
+                <a href="#" class="bg-clinic-navy text-white px-6 py-2.5 rounded-full hover:bg-slate-800 transition">Book Appointment</a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button id="menu-btn" class="md:hidden text-2xl text-clinic-navy">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 2. MOBILE HAMBURGER MENU (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 p-6 space-y-4 text-clinic-navy font-bold">
+        <a href="#" class="block py-2 border-b">Services</a>
+        <a href="#" class="block py-2 border-b">Doctors</a>
+        <a href="#" class="block py-2 border-b">Emergency Care</a>
+        <a href="#" class="block py-2 border-b">Patient Portal</a>
+        <a href="#" class="block py-4 text-clinic-emerald">Book Appointment Now</a>
+    </div>
+
+    <!-- 3. REFINED HERO SECTION (Less Cramped) -->
+    <section class="max-w-5xl mx-auto px-6 py-20 text-center">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-clinic-navy leading-tight mb-6">
+            Elite Medical Care <br>
+            <span class="text-clinic-emerald">Designed for You.</span>
+        </h1>
+        <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Experience world-class diagnostics and compassionate specialist care in the heart of Addis Ababa. 
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button class="bg-clinic-emerald text-white px-8 py-4 rounded-xl font-bold hover:bg-emerald-700 transition shadow-lg shadow-emerald-200">Book Your Visit</button>
+            <button class="bg-white text-clinic-navy border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition">Emergency Call</button>
+        </div>
+    </section>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
     </script>
 </body>
 </html>
