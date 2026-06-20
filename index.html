@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abyssinia Premium Medical Center | Addis Ababa</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
@@ -29,14 +27,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .hero-slide { display: none; }
-        .hero-slide.active { display: block; animation: fadeIn 0.8s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: scale(1.01); } to { opacity: 1; transform: scale(1); } }
     </style>
 </head>
 <body class="bg-premium-platinum text-slate-800 antialiased">
 
-    <!-- 🚨 EMERGENCY ACCENT HOTLINE BANNER (Sticky Top 0) -->
     <div class="bg-red-600 text-white text-xs font-bold py-2 px-6 sticky top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-2">
@@ -50,11 +44,9 @@
         </div>
     </div>
 
-    <!-- LUXURY NAVIGATION FRAMEWORK (Sticky Top 8) -->
     <nav class="bg-premium-navy border-b border-slate-700 sticky top-8 z-40 shadow-xl">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             
-            <!-- Logo Top Left Corner -->
             <a href="#" class="flex items-center space-x-2.5">
                 <div class="bg-gradient-to-br from-amber-500 to-premium-gold text-premium-navy p-2 rounded-xl shadow-md">
                     <i class="fa-solid fa-house-medical font-bold text-lg"></i>
@@ -65,7 +57,6 @@
                 </div>
             </a>
 
-            <!-- Desktop Links -->
             <div class="hidden lg:flex items-center space-x-8 text-xs font-bold text-slate-300 uppercase tracking-wider">
                 <a href="#workflow" class="hover:text-premium-gold transition">Our Workflow</a>
                 <a href="#gallery" class="hover:text-premium-gold transition">Facilities</a>
@@ -73,19 +64,16 @@
                 <a href="#contact" class="bg-gradient-to-r from-amber-500 to-premium-gold text-premium-navy px-6 py-3 rounded-xl font-extrabold shadow-lg hover:brightness-110 transition normal-case text-xs text-slate-900">Direct Inquiry Channel</a>
             </div>
 
-            <!-- Hamburger Button Top Right Corner -->
             <button id="menu-btn" class="text-2xl text-white focus:outline-none border border-slate-700 p-2 rounded-xl bg-slate-800/40 hover:border-premium-gold transition">
                 <i class="fa-solid fa-bars-staggered" id="menu-icon"></i>
             </button>
         </div>
     </nav>
 
-    <!-- MOBILE HAMBURGER DRAWER (FIXED: Opens seamlessly anywhere on screen) -->
     <div id="mobile-menu" class="hidden fixed bg-premium-navy border-b border-slate-700 shadow-2xl w-full left-0 z-50 top-28 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-6 grid sm:grid-cols-2 gap-8 text-xs font-bold text-slate-300 uppercase tracking-widest">
             <div class="space-y-3">
                 <h4 class="text-premium-gold text-[10px]">Navigation Links</h4>
-                <!-- HOME BUTTON ACCENT -->
                 <a href="#" onclick="closeMenu()" class="block py-2.5 border-b border-slate-800 text-premium-gold hover:text-white transition"><i class="fa-solid fa-house mr-3"></i>Home Page</a>
                 <a href="#about" onclick="closeMenu()" class="block py-2.5 border-b border-slate-800 hover:text-white transition"><i class="fa-solid fa-circle-info mr-3"></i>Get To Know Us</a>
                 <a href="#why-choose-us" onclick="closeMenu()" class="block py-2.5 border-b border-slate-800 hover:text-white transition"><i class="fa-solid fa-award mr-3"></i>Why Choose Us</a>
@@ -100,64 +88,44 @@
         </div>
     </div>
 
-    <!-- CINEMATIC HERO SLIDER SECTION -->
     <section class="relative bg-premium-navy text-white min-h-[620px] flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80'); filter: blur(12px) brightness(0.25); transform: scale(1.08);"></div>
         
-        <!-- Slide 1: Welcome / Virtual Cinematic Walkthrough -->
-        <div id="slide-video" class="hero-slide active w-full py-16">
-            <div class="max-w-5xl mx-auto px-6 text-center space-y-6">
-                <span class="text-xs font-bold uppercase text-premium-gold tracking-widest border border-premium-gold/30 px-3 py-1.5 rounded-full bg-amber-500/5">Addis Ababa Clinical Benchmark</span>
-                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-10 w-full py-12">
+            <div class="space-y-4">
+                <span class="inline-block text-[11px] font-bold uppercase tracking-widest text-emerald-400 border border-emerald-500/30 px-4 py-1.5 rounded-full bg-slate-900/60 backdrop-blur-sm">Verified Institutional Scale Metrics</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
                     Premium Healthcare Infrastructure <br><span class="bg-gradient-to-r from-amber-200 to-premium-gold bg-clip-text text-transparent">Re-imagined for East Africa.</span>
                 </h1>
-                <p class="text-slate-300 text-sm max-w-xl mx-auto leading-relaxed">
-                    Virtual cinematic walkthrough tour of our newly deployed diagnostics center node along Africa Avenue active.
-                </p>
-                <div class="pt-6">
-                    <a href="#contact" class="inline-block bg-gradient-to-r from-amber-500 to-premium-gold text-premium-navy px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider shadow-xl shadow-amber-500/10 hover:brightness-110 transition text-slate-900">Initiate Immediate Consultation</a>
+            </div>
+            
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="p-6 bg-premium-navy/90 border border-slate-700/60 rounded-2xl backdrop-blur-md shadow-2xl">
+                    <span class="block text-3xl font-black text-premium-gold">10</span>
+                    <span class="block text-[10px] text-slate-300 font-bold uppercase tracking-wider mt-1">High-Dependency Beds</span>
+                </div>
+                <div class="p-6 bg-premium-navy/90 border border-slate-700/60 rounded-2xl backdrop-blur-md shadow-2xl">
+                    <span class="block text-3xl font-black text-premium-gold">5 VIP</span>
+                    <span class="block text-[10px] text-slate-300 font-bold uppercase tracking-wider mt-1">Luxury Executive Suites</span>
+                </div>
+                <div class="p-6 bg-premium-navy/90 border border-slate-700/60 rounded-2xl backdrop-blur-md shadow-2xl">
+                    <span class="block text-3xl font-black text-premium-gold">20+</span>
+                    <span class="block text-[10px] text-slate-300 font-bold uppercase tracking-wider mt-1">Expert Medical Consultants</span>
+                </div>
+                <div class="p-6 bg-red-950/95 border border-red-900/50 rounded-2xl backdrop-blur-md shadow-2xl">
+                    <span class="block text-3xl font-black text-red-400">24/7</span>
+                    <span class="block text-[10px] text-red-200 font-bold uppercase tracking-wider mt-1">Emergency Care Unit</span>
                 </div>
             </div>
-        </div>
 
-        <!-- Slide 2: Structural Capacity Matrix WITH BLURRED IMAGE BACKGROUND -->
-        <div id="slide-metrics" class="hero-slide w-full relative py-16 overflow-hidden">
-            <!-- Blurred Medical Background Interior Image -->
-            <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80'); filter: blur(10px) brightness(0.35); transform: scale(1.05);"></div>
-            
-            <!-- Content layer over the blurred image -->
-            <div class="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-8">
-                <span class="inline-block text-[11px] font-bold uppercase tracking-widest text-emerald-400 border border-emerald-500/30 px-3 py-1.5 rounded-full bg-slate-900/60 backdrop-blur-sm">Verified Institutional Scale Metrics</span>
-                
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-                    <div class="p-6 bg-premium-navy/85 border border-slate-700/50 rounded-2xl backdrop-blur-md shadow-2xl">
-                        <span class="block text-3xl font-black text-premium-gold">10</span>
-                        <span class="block text-[10px] text-slate-300 font-bold uppercase tracking-wider mt-1">High-Dependency Beds</span>
-                    </div>
-                    <div class="p-6 bg-premium-navy/85 border border-slate-700/50 rounded-2xl backdrop-blur-md shadow-2xl">
-                        <span class="block text-3xl font-black text-premium-gold">5 VIP</span>
-                        <span class="block text-[10px] text-slate-300 font-bold uppercase tracking-wider mt-1">Luxury Executive Suites</span>
-                    </div>
-                    <div class="p-6 bg-premium-navy/85 border border-slate-700/50 rounded-2xl backdrop-blur-md shadow-2xl">
-                        <span class="block text-3xl font-black text-premium-gold">20+</span>
-                        <span class="block text-[10px] text-slate-300 font-bold uppercase tracking-wider mt-1">Expert Medical Consultants</span>
-                    </div>
-                    <div class="p-6 bg-red-950/90 border border-red-800/50 rounded-2xl backdrop-blur-md shadow-2xl">
-                        <span class="block text-3xl font-black text-red-400">24/7</span>
-                        <span class="block text-[10px] text-red-200 font-bold uppercase tracking-wider mt-1">Emergency Care Unit</span>
-                    </div>
-                </div>
-
-                <div class="pt-4">
-                    <a href="#contact" class="inline-block bg-gradient-to-r from-amber-500 to-premium-gold text-premium-navy px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider shadow-xl shadow-amber-500/10 hover:brightness-110 transition text-slate-900">Initiate Immediate Consultation</a>
-                </div>
+            <div class="pt-2">
+                <a href="#contact" class="inline-block bg-gradient-to-r from-amber-500 to-premium-gold text-premium-navy px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider shadow-xl shadow-amber-500/20 hover:brightness-110 transition text-slate-900">Initiate Immediate Consultation</a>
             </div>
         </div>
     </section>
 
-    <!-- CONTENT MODULE MATRIX -->
     <div class="max-w-7xl mx-auto px-6 py-24 space-y-32">
 
-        <!-- GET TO KNOW US & WHY CHOOSE US -->
         <section id="about" class="grid lg:grid-cols-2 gap-12 items-start">
             <div class="bg-premium-cardBg p-8 lg:p-10 rounded-3xl border border-slate-200 shadow-md space-y-4">
                 <span class="text-xs font-bold text-premium-emerald uppercase tracking-widest bg-emerald-50 border border-emerald-100 px-3 py-1 rounded-md">Get To Know Us</span>
@@ -193,7 +161,6 @@
             </div>
         </section>
 
-        <!-- SERVICES MATRIX SECTION -->
         <section id="services" class="space-y-12">
             <div class="text-center max-w-xl mx-auto space-y-2">
                 <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Core Offerings</span>
@@ -201,37 +168,33 @@
                 <p class="text-slate-600 text-xs">Fully staffed analytical medical blocks handling enterprise case files daily.</p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Cardiology -->
                 <div class="bg-premium-cardBg p-6 rounded-2xl border border-slate-200 shadow-md space-y-3 hover:border-premium-gold transition">
                     <div class="w-10 h-10 bg-blue-50 text-premium-royal rounded-xl flex items-center justify-center text-lg border border-blue-100"><i class="fa-solid fa-heart-pulse"></i></div>
                     <h4 class="font-bold text-premium-navy text-sm">Cardiology</h4>
                     <p class="text-xs text-slate-500 leading-relaxed">Advanced hemodynamic profiling, multi-tier echo assessments, and targeted vascular preventative protocols.</p>
                 </div>
-                <!-- Neurology -->
                 <div class="bg-premium-cardBg p-6 rounded-2xl border border-slate-200 shadow-md space-y-3 hover:border-premium-gold transition">
                     <div class="w-10 h-10 bg-blue-50 text-premium-royal rounded-xl flex items-center justify-center text-lg border border-blue-100"><i class="fa-solid fa-brain"></i></div>
                     <h4 class="font-bold text-premium-navy text-sm">Neurology</h4>
                     <p class="text-xs text-slate-500 leading-relaxed">Comprehensive tracking of central pathways, complex symptom diagnostics, and advanced nerve evaluations.</p>
                 </div>
-                <!-- General Surgery -->
                 <div class="bg-premium-cardBg p-6 rounded-2xl border border-slate-200 shadow-md space-y-3 hover:border-premium-gold transition">
-                    <div class="w-10 h-10 bg-blue-50 text-premium-royal rounded-xl flex items-center justify-center text-lg border border-blue-100"><i class="fa-solid fa-scalpel"></i></div>
+                    <div class="w-10 h-10 bg-blue-50 text-premium-royal rounded-xl flex items-center justify-center text-lg border border-blue-100">
+                        <i class="fa-solid fa-scissors-force fa-scalpel-line fa-solid fa-house-laptop text-premium-royal"><i class="fa-solid fa-circle-h"></i></i>
+                    </div>
                     <h4 class="font-bold text-premium-navy text-sm">General Surgery</h4>
                     <p class="text-xs text-slate-500 leading-relaxed">Minimally invasive approaches, high-sterility operating environments, and dedicated post-op oversight.</p>
                 </div>
-                <!-- Internal Medicine -->
                 <div class="bg-premium-cardBg p-6 rounded-2xl border border-slate-200 shadow-md space-y-3 hover:border-premium-gold transition">
                     <div class="w-10 h-10 bg-blue-50 text-premium-royal rounded-xl flex items-center justify-center text-lg border border-blue-100"><i class="fa-solid fa-capsules"></i></div>
                     <h4 class="font-bold text-premium-navy text-sm">Internal Medicine</h4>
                     <p class="text-xs text-slate-500 leading-relaxed">Systemic tracking logs, chronic disease management frameworks, and tailored holistic metabolic oversight.</p>
                 </div>
-                <!-- Radiology -->
                 <div class="bg-premium-cardBg p-6 rounded-2xl border border-slate-200 shadow-md space-y-3 hover:border-premium-gold transition">
                     <div class="w-10 h-10 bg-blue-50 text-premium-royal rounded-xl flex items-center justify-center text-lg border border-blue-100"><i class="fa-solid fa-x-ray"></i></div>
                     <h4 class="font-bold text-premium-navy text-sm">Radiology Node</h4>
                     <p class="text-xs text-slate-500 leading-relaxed">High-definition digital radiography metrics, precise ultrasound scans, and advanced visual structural mapping.</p>
                 </div>
-                <!-- Emergency Care -->
                 <div class="bg-red-50 p-6 rounded-2xl border border-red-100 shadow-md space-y-3">
                     <div class="w-10 h-10 bg-red-600 text-white rounded-xl flex items-center justify-center text-lg"><i class="fa-solid fa-kit-medical"></i></div>
                     <h4 class="font-bold text-red-900 text-sm">Emergency Department</h4>
@@ -240,7 +203,6 @@
             </div>
         </section>
 
-        <!-- CLINICAL OPERATIONS WORKFLOW MATRIX -->
         <section id="workflow" class="grid lg:grid-cols-12 gap-12 items-stretch">
             <div class="lg:col-span-7 bg-premium-cardBg p-8 rounded-3xl border border-slate-200 shadow-md space-y-8">
                 <div>
@@ -271,7 +233,6 @@
                 </div>
             </div>
 
-            <!-- What To Bring Block -->
             <div class="lg:col-span-5 bg-premium-navy text-white p-8 rounded-3xl space-y-6 flex flex-col justify-between shadow-xl">
                 <div class="space-y-4">
                     <h3 class="text-xl font-bold text-premium-gold tracking-tight"><i class="fa-solid fa-clipboard-list mr-2"></i> What To Bring</h3>
@@ -290,7 +251,6 @@
             </div>
         </section>
 
-        <!-- SCHEDULES CHART NODE -->
         <section id="hours" class="bg-premium-cardBg rounded-3xl border border-slate-200 p-8 lg:p-10 shadow-md space-y-8">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
@@ -308,16 +268,14 @@
             </div>
         </section>
 
-        <!-- TOURS GALLERY (UPDATED TO BLACK FEMALE DOCTOR ASSET) -->
         <section id="gallery" class="space-y-8">
             <div class="text-center max-w-2xl mx-auto space-y-2">
                 <h2 class="text-3xl font-extrabold text-premium-navy tracking-tight">Take a Tour of Our Facilities</h2>
                 <p class="text-slate-500 text-xs">Meet our expert team and explore the advanced technology we use to provide exceptional healthcare.</p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- SWAPPED: Beautiful Black Female Clinical Expert Representative Asset -->
                 <div class="group relative rounded-2xl overflow-hidden shadow-md border border-white">
-                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=450&h=320&q=80" alt="Consultant Medical Specialist" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=450&h=320&q=80" alt="Consultant Physician Specialist" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent p-4 flex flex-col justify-end text-white">
                         <span class="text-[10px] font-bold tracking-widest text-premium-gold uppercase">Expert Team</span>
                         <h4 class="font-bold text-sm">Consultant Physician Matrix</h4>
@@ -340,7 +298,6 @@
             </div>
         </section>
 
-        <!-- CONTACT ARCHITECTURE & MAP NODE -->
         <section id="contact" class="grid lg:grid-cols-12 gap-12 items-start">
             <div class="lg:col-span-7 bg-premium-cardBg p-8 rounded-3xl border border-slate-200 shadow-md space-y-6">
                 <div>
@@ -382,7 +339,6 @@
                 </form>
             </div>
 
-            <!-- Contact Context Details Block -->
             <div class="lg:col-span-5 space-y-6">
                 <div class="bg-premium-navy text-white p-6 rounded-3xl space-y-4 shadow-xl">
                     <h4 class="text-premium-gold font-bold text-xs uppercase tracking-widest border-b border-slate-700 pb-2">Direct Contact Node</h4>
@@ -392,16 +348,14 @@
                         <p class="flex items-start"><i class="fa-solid fa-location-dot text-premium-gold mr-3 text-sm mt-0.5"></i> Bole Sub-City, Africa Avenue,<br>Addis Ababa, Ethiopia</p>
                     </div>
                 </div>
-                <!-- Interactive Embed Map Frame -->
-                <div class="rounded-3xl overflow-hidden shadow-md border border-slate-200 h-64 bg-slate-200">
-                    <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63048.244304660324!2d38.7444704!3d9.0107936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1m3!1zOcKwMDAnMzguOSJOIDM4wrA0NScxMC43IkU!5e0!3m2!1sen!2set!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+                <div class="rounded-3xl overflow-hidden shadow-md border border-slate-200 h-64 bg-slate-200 relative">
+                    <iframe class="w-full h-full border-0 absolute inset-0" src="https://maps.google.com/maps?q=Africa%20Avenue,%20Addis%20Ababa,%20Ethiopia&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </section>
 
     </div>
 
-    <!-- ENTERPRISE FOOTER METRICS -->
     <footer class="bg-premium-navy text-slate-300 text-xs py-16 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 font-medium">
             <div class="space-y-4">
@@ -442,11 +396,10 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-slate-800 text-center text-slate-500 text-[11px]">
-            &copy; 2026 Abyssinia Premium Medical Center. Elite Healthcare Architecture Presentation Layout.
+            © 2026 Abyssinia Premium Medical Center. Elite Healthcare Architecture Presentation Layout.
         </div>
     </footer>
 
-    <!-- INTERACTIVE EVENT DRIVERS SCRIPTS RUNTIME -->
     <script>
         // Hamburger Menu Drawer Controller Logic (Fixed Window Navigation Setup)
         const menuBtn = document.getElementById('menu-btn');
@@ -467,20 +420,6 @@
             mobileMenu.classList.add('hidden');
             menuIcon.className = "fa-solid fa-bars-staggered";
         }
-
-        // Hero Switch Engine: 5-Second Rotational Toggle System
-        const slideVideo = document.getElementById('slide-video');
-        const slideMetrics = document.getElementById('slide-metrics');
-        
-        setInterval(() => {
-            if (slideVideo.classList.contains('active')) {
-                slideVideo.classList.remove('active');
-                slideMetrics.classList.add('active');
-            } else {
-                slideMetrics.classList.remove('active');
-                slideVideo.classList.add('active');
-            }
-        }, 5000);
     </script>
 </body>
 </html>
