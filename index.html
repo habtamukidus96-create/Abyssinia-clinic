@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abyssinia HealthSuite | Premium Clinical Care</title>
+    <title>Abyssinia Premium Medical Center | Addis Ababa</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        clinic: {
-                            navy: '#0f172a',
-                            emerald: '#059669',
-                            soft: '#f8fafc'
+                        premium: {
+                            obsidian: '#090d16',
+                            gold: '#dfb76c',
+                            emerald: '#0ea5e9',
+                            darkCard: '#131926',
+                            softBg: '#f8fafc'
                         }
                     }
                 }
@@ -24,173 +28,457 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .hero-slide { display: none; }
+        .hero-slide.active { display: block; animation: fadeIn 0.8s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(1.02); } to { opacity: 1; transform: scale(1); } }
     </style>
 </head>
-<body class="bg-clinic-soft text-slate-800">
+<body class="bg-premium-softBg text-slate-800 antialiased">
 
-    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+    <!-- 🚨 EMERGENCY ACCENT HOTLINE BANNER -->
+    <div class="bg-red-700 text-white text-xs font-bold py-2 px-6 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-truck-medical animate-pulse text-sm text-premium-gold"></i>
+                <span>24/7 CRITICAL TRAUMA OUTPOST ACTIVE</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:0912643473" class="hover:underline text-[11px]"><i class="fa-solid fa-phone mr-1"></i> 0912643473</a>
+                <a href="tel:1412" class="bg-white text-red-700 px-2.5 py-0.5 rounded font-extrabold text-[11px]">SHORTCODE: 1412</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- LUXURY NAVIGATION FRAMEWORK -->
+    <nav class="bg-premium-obsidian border-b border-slate-800 sticky top-8 z-40 shadow-xl">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             
-            <a href="#" class="flex items-center space-x-2">
-                <div class="bg-clinic-emerald text-white p-2 rounded-lg">
-                    <i class="fa-solid fa-plus font-bold"></i>
+            <!-- Logo Top Left Corner -->
+            <a href="#" class="flex items-center space-x-2.5">
+                <div class="bg-gradient-to-br from-amber-500 to-premium-gold text-premium-obsidian p-2 rounded-xl shadow-md">
+                    <i class="fa-solid fa-house-medical font-bold text-lg"></i>
                 </div>
-                <span class="text-xl font-bold tracking-tight text-clinic-navy">ABYSSINIA<span class="font-light text-slate-400">CLINIC</span></span>
+                <div>
+                    <span class="text-lg font-extrabold text-white tracking-tight block">ABYSSINIA</span>
+                    <span class="text-[9px] text-premium-gold font-bold uppercase tracking-widest block -mt-1">Premium Center</span>
+                </div>
             </a>
 
-            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
-                <a href="#services" class="hover:text-clinic-emerald transition">Services</a>
-                <a href="#doctors" class="hover:text-clinic-emerald transition">Doctors</a>
-                <a href="#emergency" class="hover:text-clinic-emerald transition">Emergency Care</a>
-                <a href="#appointment" class="bg-clinic-navy text-white px-6 py-2.5 rounded-full hover:bg-slate-800 transition">Book Appointment</a>
+            <!-- Desktop Quick Target Actions -->
+            <div class="hidden lg:flex items-center space-x-8 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                <a href="#workflow" class="hover:text-premium-gold transition">Our Workflow</a>
+                <a href="#gallery" class="hover:text-premium-gold transition">Facilities</a>
+                <a href="#services" class="hover:text-premium-gold transition">Medical Services</a>
+                <a href="#contact" class="bg-gradient-to-r from-amber-500 to-premium-gold text-premium-obsidian px-6 py-3 rounded-xl font-extrabold shadow-lg hover:brightness-110 transition normal-case text-xs">Direct Inquiry Channel</a>
             </div>
 
-            <button id="menu-btn" class="md:hidden text-2xl text-clinic-navy focus:outline-none">
-                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <!-- Hamburger Button Top Right Corner -->
+            <button id="menu-btn" class="text-2xl text-white focus:outline-none border border-slate-800 p-2 rounded-xl bg-slate-900/50 hover:border-premium-gold transition">
+                <i class="fa-solid fa-bars-staggered" id="menu-icon"></i>
             </button>
         </div>
     </nav>
 
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 shadow-lg absolute w-full left-0 z-40 transition-all duration-300">
-        <div class="px-6 py-4 space-y-2 text-sm font-bold text-slate-700">
-            <a href="#services" onclick="closeMenu()" class="block py-3 border-b border-slate-50 hover:text-clinic-emerald transition"><i class="fa-solid fa-stethoscope mr-3 text-slate-400"></i>Services</a>
-            <a href="#doctors" onclick="closeMenu()" class="block py-3 border-b border-slate-50 hover:text-clinic-emerald transition"><i class="fa-solid fa-user-doctor mr-3 text-slate-400"></i>Doctors</a>
-            <a href="#emergency" onclick="closeMenu()" class="block py-3 border-b border-slate-50 hover:text-clinic-emerald transition"><i class="fa-solid fa-kit-medical mr-3 text-slate-400"></i>Emergency Care</a>
-            <a href="#appointment" onclick="closeMenu()" class="block py-4 text-clinic-emerald font-extrabold text-base"><i class="fa-regular fa-calendar-check mr-3"></i>Book Appointment Now</a>
+    <!-- MOBILE HAMBURGER DRAWER -->
+    <div id="mobile-menu" class="hidden bg-premium-obsidian border-b border-slate-800 shadow-2xl absolute w-full left-0 z-30 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-6 grid sm:grid-cols-2 gap-8 text-xs font-bold text-slate-400 uppercase tracking-widest">
+            <div class="space-y-3">
+                <h4 class="text-premium-gold text-[10px]">Navigation Menu Nodes</h4>
+                <a href="#about" onclick="closeMenu()" class="block py-2.5 border-b border-slate-900 hover:text-white transition"><i class="fa-solid fa-circle-info mr-3"></i>Get To Know Us</a>
+                <a href="#why-choose-us" onclick="closeMenu()" class="block py-2.5 border-b border-slate-900 hover:text-white transition"><i class="fa-solid fa-award mr-3"></i>Why Choose Us</a>
+                <a href="#services" onclick="closeMenu()" class="block py-2.5 border-b border-slate-900 hover:text-white transition"><i class="fa-solid fa-stethoscope mr-3"></i>Clinical Offerings</a>
+                <a href="#gallery" onclick="closeMenu()" class="block py-2.5 hover:text-white transition"><i class="fa-solid fa-images mr-3"></i>Facility Gallery Tour</a>
+            </div>
+            <div class="space-y-3">
+                <h4 class="text-premium-gold text-[10px]">Direct Operational Gateways</h4>
+                <a href="#hours" onclick="closeMenu()" class="block py-2.5 border-b border-slate-900 hover:text-white transition"><i class="fa-regular fa-clock mr-3"></i>Department Schedules</a>
+                <a href="#contact" onclick="closeMenu()" class="block py-2.5 border-b border-slate-900 hover:text-white transition"><i class="fa-solid fa-envelope mr-3"></i>Leave Message</a>
+                <a href="tel:1412" class="block py-3 text-red-400 text-sm font-extrabold"><i class="fa-solid fa-phone-flip mr-3"></i>Emergency Response (1412)</a>
+            </div>
         </div>
     </div>
 
-    <section class="max-w-5xl mx-auto px-6 py-24 text-center">
-        <h1 class="text-5xl md:text-6xl font-extrabold text-clinic-navy leading-tight mb-6 tracking-tight">
-            Elite Medical Care <br>
-            <span class="text-clinic-emerald">Designed for You.</span>
-        </h1>
-        <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Experience world-class diagnostics and compassionate specialist care in the heart of Addis Ababa. Seamless medical precision built around your lifestyle.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-sm mx-auto sm:max-w-none">
-            <a href="#appointment" class="bg-clinic-emerald text-white px-8 py-4 rounded-xl font-bold hover:bg-emerald-700 transition shadow-lg shadow-emerald-200 text-center">Book Your Visit</a>
-            <a href="#emergency" class="bg-white text-clinic-navy border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition text-center">Emergency Info</a>
-        </div>
-    </section>
+    <!-- CINEMATIC VIDEO & INFRASTRUCTURE MATRIX HERO -->
+    <section class="relative bg-premium-obsidian text-white h-[620px] flex items-center overflow-hidden">
+        <!-- Loop Video Layer Simulation Background (Using clinical ambient graphic background fallback) -->
+        <div class="absolute inset-0 z-0 bg-slate-950 mix-blend-multiply opacity-40"></div>
+        <video class="absolute inset-0 w-full h-full object-cover z-0 opacity-20 pointer-events-none" autoplay loop muted playsinline>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-medical-analysis-in-a-modern-laboratory-41610-large.mp4" type="video/mp4">
+        </video>
 
-    <section id="services" class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center max-w-xl mx-auto mb-16">
-                <h2 class="text-3xl font-extrabold text-clinic-navy tracking-tight">Our Core Services</h2>
-                <p class="text-slate-400 text-sm mt-2">Comprehensive diagnostics and clinical treatment offerings.</p>
+        <div class="max-w-5xl mx-auto px-6 relative z-10 w-full text-center">
+            
+            <!-- Slide 1: Premium Ambient Clinic Reel (5 Seconds Interval Loop Element) -->
+            <div id="slide-video" class="hero-slide active space-y-6">
+                <span class="text-xs font-bold uppercase text-premium-gold tracking-widest border border-premium-gold/30 px-3 py-1.5 rounded-full bg-amber-500/5">Addis Ababa Clinical Benchmark</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                    Premium Healthcare Infrastructure <br><span class="bg-gradient-to-r from-amber-200 to-premium-gold bg-clip-text text-transparent">Re-imagined for East Africa.</span>
+                </h1>
+                <p class="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">
+                    Now playing: Live virtual walkthrough tour of our newly deployed diagnostics center node along Africa Avenue.
+                </p>
             </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="p-6 bg-clinic-soft rounded-2xl border border-slate-100 space-y-3 hover:border-clinic-emerald transition">
-                    <div class="text-clinic-emerald text-xl"><i class="fa-solid fa-heart-pulse"></i></div>
-                    <h4 class="font-bold text-clinic-navy">General Consultation</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed">Routine examinations, internal wellness screening, and preventative healthcare diagnostics.</p>
-                </div>
-                <div class="p-6 bg-clinic-soft rounded-2xl border border-slate-100 space-y-3 hover:border-clinic-emerald transition">
-                    <div class="text-clinic-emerald text-xl"><i class="fa-solid fa-baby"></i></div>
-                    <h4 class="font-bold text-clinic-navy">Pediatrics</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed">Specialized pediatric analysis monitoring, growth reviews, and developmental immunization.</p>
-                </div>
-                <div class="p-6 bg-clinic-soft rounded-2xl border border-slate-100 space-y-3 hover:border-clinic-emerald transition">
-                    <div class="text-clinic-emerald text-xl"><i class="fa-solid fa-tooth"></i></div>
-                    <h4 class="font-bold text-clinic-navy">Dental Practice</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed">Advanced restoration treatments, absolute standard cosmetics, and surgical dental metrics.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="doctors" class="py-24 bg-clinic-soft">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center max-w-xl mx-auto mb-16">
-                <h2 class="text-3xl font-extrabold text-clinic-navy tracking-tight">Senior Medical Staff</h2>
-                <p class="text-slate-400 text-sm mt-2">Meet our internationally certified clinical department heads.</p>
-            </div>
-            <div class="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                <div class="bg-white p-5 rounded-2xl border border-slate-200/60 flex items-center space-x-4 shadow-sm">
-                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=120&h=120&q=80" alt="Doctor" class="w-16 h-16 object-cover rounded-xl">
-                    <div>
-                        <h4 class="font-bold text-clinic-navy">Dr. Dawit Alamu</h4>
-                        <p class="text-xs text-clinic-emerald font-semibold">Chief Consultant Cardiologist</p>
-                        <p class="text-[11px] text-slate-400 mt-0.5">14+ Years Clinical Experience</p>
+            <!-- Slide 2: Structural Capacity Matrix -->
+            <div id="slide-metrics" class="hero-slide space-y-8">
+                <span class="text-xs font-bold uppercase text-emerald-400 tracking-widest border border-emerald-500/30 px-3 py-1.5 rounded-full bg-emerald-500/5">Verified Institutional Scale Metrics</span>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-4">
+                    <div class="p-6 bg-slate-900/60 border border-slate-800 rounded-2xl backdrop-blur-sm">
+                        <span class="block text-3xl font-black text-premium-gold">10</span>
+                        <span class="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-1">High-Dependency Beds</span>
+                    </div>
+                    <div class="p-6 bg-slate-900/60 border border-slate-800 rounded-2xl backdrop-blur-sm">
+                        <span class="block text-3xl font-black text-premium-gold">5 VIP</span>
+                        <span class="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-1">Luxury Executive Suites</span>
+                    </div>
+                    <div class="p-6 bg-slate-900/60 border border-slate-800 rounded-2xl backdrop-blur-sm">
+                        <span class="block text-3xl font-black text-premium-gold">20+</span>
+                        <span class="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-1">Expert Medical Consultants</span>
+                    </div>
+                    <div class="p-6 bg-red-950/40 border border-red-900/50 rounded-2xl backdrop-blur-sm">
+                        <span class="block text-3xl font-black text-red-400">24/7</span>
+                        <span class="block text-[10px] text-red-300 font-bold uppercase tracking-wider mt-1">Emergency Care Unit</span>
                     </div>
                 </div>
-                <div class="bg-white p-5 rounded-2xl border border-slate-200/60 flex items-center space-x-4 shadow-sm">
-                    <img src="https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&w=120&h=120&q=80" alt="Doctor" class="w-16 h-16 object-cover rounded-xl">
-                    <div>
-                        <h4 class="font-bold text-clinic-navy">Dr. Helen Tsegaye</h4>
-                        <p class="text-xs text-clinic-emerald font-semibold">Senior Pediatric Specialist</p>
-                        <p class="text-[11px] text-slate-400 mt-0.5">9+ Years Clinical Experience</p>
-                    </div>
-                </div>
+            </div>
+
+            <div class="pt-8">
+                <a href="#contact" class="inline-block bg-gradient-to-r from-amber-500 to-premium-gold text-premium-obsidian px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider shadow-xl shadow-amber-500/10 hover:brightness-110 transition">Initiate Immediate Consultation</a>
             </div>
         </div>
     </section>
 
-    <section id="emergency" class="py-24 bg-white border-t border-b border-slate-100">
-        <div class="max-w-xl mx-auto px-6 text-center space-y-6">
-            <div class="w-12 h-12 bg-red-50 text-red-600 rounded-full flex items-center justify-center text-xl mx-auto animate-pulse">
-                <i class="fa-solid fa-phone-volume"></i>
-            </div>
-            <h2 class="text-3xl font-extrabold text-clinic-navy tracking-tight">24/7 Crisis Trauma Line</h2>
-            <p class="text-slate-500 text-sm leading-relaxed">
-                If you are facing a critical urgent emergency situation, skip online registration queues completely and dial our localized high-priority shortcode line right now.
-            </p>
-            <a href="tel:8222" class="inline-block bg-red-600 text-white font-extrabold text-lg px-8 py-4 rounded-xl shadow-lg shadow-red-200 hover:bg-red-700 transition">
-                <i class="fa-solid fa-phone mr-2"></i> Call Now: 8222
-            </a>
-        </div>
-    </section>
+    <!-- CONTENT MODULE MATRIX -->
+    <div class="max-w-7xl mx-auto px-6 py-24 space-y-32">
 
-    <section id="appointment" class="py-24 bg-clinic-soft">
-        <div class="max-w-lg mx-auto px-6">
-            <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-200/60 space-y-6">
-                <div class="text-center">
-                    <h3 class="text-xl font-bold text-clinic-navy">Digital Registration Hub</h3>
-                    <p class="text-xs text-slate-400 mt-1">Submit your request details below to dispatch validation.</p>
+        <!-- GET TO KNOW US & WHY CHOOSE US BRAND ARCHITECTURE -->
+        <section id="about" class="grid lg:grid-cols-2 gap-12 items-start">
+            <div class="bg-white p-8 lg:p-10 rounded-3xl border border-slate-200/80 shadow-sm space-y-4">
+                <span class="text-xs font-bold text-premium-gold uppercase tracking-widest bg-amber-500/5 border border-amber-500/10 px-3 py-1 rounded-md">Get To Know Us</span>
+                <h2 class="text-3xl font-extrabold text-premium-obsidian tracking-tight">Pioneering Clinical Standards in the Capital</h2>
+                <p class="text-slate-500 text-xs leading-relaxed">
+                    Abyssinia Premium Medical Center is a premier healthcare institution dedicated to bridging the gap between world-class medical innovation and community wellness. Strategically deployed inside Addis Ababa, our center features state-of-the-art diagnostic modalities under a centralized high-end healthcare configuration. We treat healthcare not just as a service, but as an absolute commitment to elite patient restoration.
+                </p>
+                <div class="pt-4 grid grid-cols-2 gap-4 text-[11px] font-bold text-slate-600">
+                    <div class="flex items-center"><i class="fa-solid fa-square-check text-emerald-500 mr-2 text-sm"></i> Ministry of Health Approved</div>
+                    <div class="flex items-center"><i class="fa-solid fa-square-check text-emerald-500 mr-2 text-sm"></i> Multi-Lingual Support Hub</div>
                 </div>
-                <form onsubmit="event.preventDefault(); alert('Appointment requested successfully!');" class="space-y-4 text-xs font-medium">
-                    <div>
-                        <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Full Name</label>
-                        <input type="text" placeholder="Abebe Kebede" class="w-full px-4 py-3 bg-clinic-soft border border-slate-200 rounded-xl focus:outline-none focus:border-clinic-emerald font-semibold">
+            </div>
+
+            <div id="why-choose-us" class="bg-premium-obsidian text-white p-8 lg:p-10 rounded-3xl space-y-6 shadow-xl relative overflow-hidden">
+                <span class="text-xs font-bold text-premium-gold uppercase tracking-widest bg-white/5 px-3 py-1 rounded-md">Why Choose Us</span>
+                <h2 class="text-3xl font-extrabold tracking-tight">Uncompromising Patient Security</h2>
+                <div class="space-y-4 text-xs">
+                    <div class="flex items-start space-x-3">
+                        <div class="text-premium-gold mt-0.5"><i class="fa-solid fa-microscope text-base"></i></div>
+                        <div>
+                            <h4 class="font-bold text-white">Next-Gen Laboratory Profiling</h4>
+                            <p class="text-slate-400 text-[11px] mt-0.5">Real-time precise automation systems removing standard manual operational error vectors entirely.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="text-premium-gold mt-0.5"><i class="fa-solid fa-user-shield text-base"></i></div>
+                        <div>
+                            <h4 class="font-bold text-white">Elite Specialist Rota Access</h4>
+                            <p class="text-slate-400 text-[11px] mt-0.5">Direct access pipelines to senior clinical physicians with deep localized case histories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES MATRIX SECTION -->
+        <section id="services" class="space-y-12">
+            <div class="text-center max-w-xl mx-auto space-y-2">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Core Offerings</span>
+                <h2 class="text-3xl font-extrabold text-premium-obsidian tracking-tight">Specialized Clinical Pillars</h2>
+                <p class="text-slate-500 text-xs">Fully staffed analytical medical blocks handling enterprise case files daily.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cardiology -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm space-y-3 hover:border-premium-gold transition">
+                    <div class="w-10 h-10 bg-amber-500/5 text-premium-gold rounded-xl flex items-center justify-center text-lg border border-amber-500/10"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h4 class="font-bold text-premium-obsidian text-sm">Cardiology</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Advanced hemodynamic profiling, multi-tier echo assessments, and targeted vascular preventative protocols.</p>
+                </div>
+                <!-- Neurology -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm space-y-3 hover:border-premium-gold transition">
+                    <div class="w-10 h-10 bg-amber-500/5 text-premium-gold rounded-xl flex items-center justify-center text-lg border border-amber-500/10"><i class="fa-solid fa-brain"></i></div>
+                    <h4 class="font-bold text-premium-obsidian text-sm">Neurology</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Comprehensive tracking of central pathways, complex symptom diagnostics, and advanced nerve evaluations.</p>
+                </div>
+                <!-- General Surgery -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm space-y-3 hover:border-premium-gold transition">
+                    <div class="w-10 h-10 bg-amber-500/5 text-premium-gold rounded-xl flex items-center justify-center text-lg border border-amber-500/10"><i class="fa-solid fa-scalpel"></i></div>
+                    <h4 class="font-bold text-premium-obsidian text-sm">General Surgery</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Minimally invasive approaches, high-sterility operating environments, and dedicated post-op oversight.</p>
+                </div>
+                <!-- Internal Medicine -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm space-y-3 hover:border-premium-gold transition">
+                    <div class="w-10 h-10 bg-amber-500/5 text-premium-gold rounded-xl flex items-center justify-center text-lg border border-amber-500/10"><i class="fa-solid fa-capsules"></i></div>
+                    <h4 class="font-bold text-premium-obsidian text-sm">Internal Medicine</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Systemic tracking logs, chronic disease management frameworks, and tailored holistic metabolic oversight.</p>
+                </div>
+                <!-- Radiology -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm space-y-3 hover:border-premium-gold transition">
+                    <div class="w-10 h-10 bg-amber-500/5 text-premium-gold rounded-xl flex items-center justify-center text-lg border border-amber-500/10"><i class="fa-solid fa-x-ray"></i></div>
+                    <h4 class="font-bold text-premium-obsidian text-sm">Radiology Node</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">High-definition digital radiography metrics, precise ultrasound scans, and advanced visual structural mapping.</p>
+                </div>
+                <!-- Emergency Care -->
+                <div class="bg-red-50 p-6 rounded-2xl border border-red-100 shadow-sm space-y-3">
+                    <div class="w-10 h-10 bg-red-600 text-white rounded-xl flex items-center justify-center text-lg"><i class="fa-solid fa-kit-medical"></i></div>
+                    <h4 class="font-bold text-red-900 text-sm">Emergency Department</h4>
+                    <p class="text-xs text-red-700/80 leading-relaxed">Immediate high-priority triage, acute traumatic wound care response protocols, and shortcode sync loops active 24/7.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLINICAL OPERATIONS WORKFLOW MATRIX & INTAKE PREREQUISITES -->
+        <section id="workflow" class="grid lg:grid-cols-12 gap-12 items-stretch">
+            
+            <!-- How It Works Timeline Matrix -->
+            <div class="lg:col-span-7 bg-white p-8 rounded-3xl border border-slate-200/60 shadow-sm space-y-8">
+                <div>
+                    <h3 class="text-2xl font-extrabold text-premium-obsidian tracking-tight">How Our Hospital Works</h3>
+                    <p class="text-slate-400 text-xs mt-1">Structured clinical flow designed to optimize patient waiting metrics.</p>
+                </div>
+                <div class="relative border-l-2 border-slate-100 pl-6 space-y-6 text-xs font-medium">
+                    <div class="relative">
+                        <div class="absolute -left-[31px] top-0 bg-premium-gold text-premium-obsidian w-4 h-4 rounded-full text-[9px] font-black flex items-center justify-center">1</div>
+                        <h4 class="font-bold text-premium-obsidian text-sm">Book Appointment</h4>
+                        <p class="text-slate-400 text-[11px] mt-0.5">Submit request via our automated digital intake platform or direct priority call nodes.</p>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -left-[31px] top-0 bg-premium-gold text-premium-obsidian w-4 h-4 rounded-full text-[9px] font-black flex items-center justify-center">2</div>
+                        <h4 class="font-bold text-premium-obsidian text-sm">Arrive and Check In</h4>
+                        <p class="text-slate-400 text-[11px] mt-0.5">Present confirmation code at reception desks inside Africa Avenue facility hub for immediate tracking generation.</p>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -left-[31px] top-0 bg-premium-gold text-premium-obsidian w-4 h-4 rounded-full text-[9px] font-black flex items-center justify-center">3</div>
+                        <h4 class="font-bold text-premium-obsidian text-sm">Specialist Consultation</h4>
+                        <p class="text-slate-400 text-[11px] mt-0.5">Comprehensive diagnostic examination review inside localized consulting suites with dedicated equipment profiles.</p>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -left-[31px] top-0 bg-premium-gold text-premium-obsidian w-4 h-4 rounded-full text-[9px] font-black flex items-center justify-center">4</div>
+                        <h4 class="font-bold text-premium-obsidian text-sm">Follow-Up Architecture</h4>
+                        <p class="text-slate-400 text-[11px] mt-0.5">Automated delivery of diagnostic lab charts via secure channels with long-term monitoring targets scheduled.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What To Bring Block -->
+            <div class="lg:col-span-5 bg-premium-obsidian text-white p-8 rounded-3xl space-y-6 flex flex-col justify-between shadow-xl">
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-premium-gold tracking-tight"><i class="fa-solid fa-clipboard-list mr-2"></i> What To Bring</h3>
+                    <p class="text-slate-400 text-[11px]">Kindly verify you possess these operational components prior to clinical checking:</p>
+                    <ul class="space-y-3 text-xs font-semibold text-slate-300 pt-2">
+                        <li class="flex items-center"><i class="fa-solid fa-id-card text-premium-gold mr-3"></i> 1. Valid Government-Issued ID</li>
+                        <li class="flex items-center"><i class="fa-solid fa-folder-open text-premium-gold mr-3"></i> 2. Historical Medical Reports / Imaging Logs</li>
+                        <li class="flex items-center"><i class="fa-solid fa-credit-card text-premium-gold mr-3"></i> 3. Verified Electronic Payment Method / Insurance Token</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800 text-[11px] space-y-2 text-slate-400">
+                    <h4 class="font-bold text-white uppercase text-[9px] tracking-wider text-premium-gold">Patient Services</h4>
+                    <p><i class="fa-solid fa-language text-emerald-400 mr-1.5"></i> Multilingual Support Active (Amharic, Oromiffa, English)</p>
+                    <p><i class="fa-solid fa-shield-halved text-emerald-400 mr-1.5"></i> Local Insurance Acceptance Profiles Integrated</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPARTMENT SCHEDULE CHART NODE -->
+        <section id="hours" class="bg-white rounded-3xl border border-slate-200/80 p-8 lg:p-10 shadow-sm space-y-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <h3 class="text-2xl font-extrabold text-premium-obsidian tracking-tight">Institutional Opening Hours</h3>
+                    <p class="text-slate-400 text-xs mt-0.5">Operational framework matrices across running clinic segments.</p>
+                </div>
+                <span class="inline-flex items-center text-xs font-bold text-red-600 bg-red-50 border border-red-100 px-3 py-1 rounded-lg self-start md:self-auto"><span class="w-2 h-2 bg-red-600 rounded-full mr-2 animate-pulse"></span> Emergency Block: 24/7 Uninterrupted</span>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs font-semibold text-slate-600">
+                <div class="p-4 bg-premium-softBg border border-slate-100 rounded-xl flex justify-between items-center"><span>Out-Patient Clinic</span><span class="text-slate-900 font-bold">Mon - Sat</span></div>
+                <div class="p-4 bg-premium-softBg border border-slate-100 rounded-xl flex justify-between items-center"><span>Laboratory Desk</span><span class="text-slate-900 font-bold">Mon - Sat</span></div>
+                <div class="p-4 bg-premium-softBg border border-slate-100 rounded-xl flex justify-between items-center"><span>Radiology Wing</span><span class="text-slate-900 font-bold">Mon - Sat</span></div>
+                <div class="p-4 bg-premium-softBg border border-slate-100 rounded-xl flex justify-between items-center"><span>Pharmacy Hub</span><span class="text-slate-900 font-bold">Mon - Sat</span></div>
+                <div class="p-4 bg-premium-softBg border border-slate-100 rounded-xl flex justify-between items-center"><span>Administration Core</span><span class="text-slate-900 font-bold">Mon - Sat</span></div>
+            </div>
+        </section>
+
+        <!-- HIGH-END GALLERY TOUR FRAMEWORK (LOCAL ETHIOPIAN PROFILE FOCUS) -->
+        <section id="gallery" class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h2 class="text-3xl font-extrabold text-premium-obsidian tracking-tight">Take a Tour of Our Facilities</h2>
+                <p class="text-slate-500 text-xs">Meet our expert team and explore the advanced technology we use to provide exceptional healthcare.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative rounded-2xl overflow-hidden shadow-md border border-white">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=450&h=320&q=80" alt="Ethiopian Diagnostic Specialist" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] font-bold tracking-widest text-premium-gold uppercase">Expert Team</span>
+                        <h4 class="font-bold text-sm">Consultant Physician Matrix</h4>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md border border-white">
+                    <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=450&h=320&q=80" alt="Advanced Hematology Laboratory Center" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] font-bold tracking-widest text-premium-gold uppercase">Diagnostics</span>
+                        <h4 class="font-bold text-sm">Molecular Automated Lab Core</h4>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md border border-white">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=450&h=320&q=80" alt="High-Dependency Care Unit Space" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] font-bold tracking-widest text-premium-gold uppercase">In-Patient Node</span>
+                        <h4 class="font-bold text-sm">Premium Clinical Bed Framework</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HIGH-CONVERSION CONTACT ARCHITECTURE & MAP NODE -->
+        <section id="contact" class="grid lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- Structural Registration Input Form Area -->
+            <div class="lg:col-span-7 bg-white p-8 rounded-3xl border border-slate-200/80 shadow-md space-y-6">
+                <div>
+                    <h3 class="text-xl font-bold text-premium-obsidian tracking-tight">Send Us a Message</h3>
+                    <p class="text-slate-400 text-xs mt-0.5">Direct encrypted data stream to our customer service desk.</p>
+                </div>
+                <form onsubmit="event.preventDefault(); alert('Message successfully sent!'); font-medium" class="space-y-4 text-xs font-semibold text-slate-700">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">First Name</label>
+                            <input type="text" required placeholder="Abebe" class="w-full px-4 py-3 bg-premium-softBg border border-slate-200 rounded-xl focus:outline-none focus:border-premium-gold">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Last Name</label>
+                            <input type="text" required placeholder="Kebede" class="w-full px-4 py-3 bg-premium-softBg border border-slate-200 rounded-xl focus:outline-none focus:border-premium-gold">
+                        </div>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Email Address</label>
+                            <input type="email" required placeholder="name@domain.com" class="w-full px-4 py-3 bg-premium-softBg border border-slate-200 rounded-xl focus:outline-none focus:border-premium-gold">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Phone Number</label>
+                            <input type="tel" required placeholder="+251 9XX XXX XXX" class="w-full px-4 py-3 bg-premium-softBg border border-slate-200 rounded-xl focus:outline-none focus:border-premium-gold">
+                        </div>
                     </div>
                     <div>
-                        <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Phone Number</label>
-                        <input type="tel" placeholder="+251 9XX XXX XXX" class="w-full px-4 py-3 bg-clinic-soft border border-slate-200 rounded-xl focus:outline-none focus:border-clinic-emerald font-semibold">
+                        <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Subject</label>
+                        <input type="text" required placeholder="Medical History Portfolio Inquiry" class="w-full px-4 py-3 bg-premium-softBg border border-slate-200 rounded-xl focus:outline-none focus:border-premium-gold">
                     </div>
-                    <button type="submit" class="w-full bg-clinic-emerald text-white font-bold py-4 rounded-xl hover:bg-emerald-700 transition uppercase tracking-wider shadow-md shadow-emerald-100 mt-2">
-                        Transmit Registration Intake
+                    <div>
+                        <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1">Message Bar</label>
+                        <textarea rows="4" required placeholder="Elaborate details here..." class="w-full px-4 py-3 bg-premium-softBg border border-slate-200 rounded-xl focus:outline-none focus:border-premium-gold resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-premium-obsidian text-white font-bold py-4 rounded-xl hover:bg-slate-800 transition uppercase tracking-wider shadow-lg">
+                        Send Verified Inquiry
                     </button>
                 </form>
             </div>
-        </div>
-    </section>
 
-    <footer class="bg-slate-950 text-slate-500 py-12 border-t border-slate-900 text-xs text-center">
-        <p>&copy; 2026 Abyssinia Premium Medical Center. Clean Luxury Medical Framework.</p>
+            <!-- Coordinate Block & Live Embedded Map Layer -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-premium-obsidian text-white p-6 rounded-3xl space-y-4 shadow-xl">
+                    <h4 class="text-premium-gold font-bold text-xs uppercase tracking-widest border-b border-slate-800 pb-2">Direct Contact Node</h4>
+                    <div class="text-xs space-y-3 font-medium text-slate-300">
+                        <p class="flex items-center"><i class="fa-solid fa-phone-flip text-premium-gold mr-3 text-sm"></i> 0912643473</p>
+                        <p class="flex items-center"><i class="fa-solid fa-envelope text-premium-gold mr-3 text-sm"></i> habtamukidus96@gmail.com</p>
+                        <p class="flex items-start"><i class="fa-solid fa-location-dot text-premium-gold mr-3 text-sm mt-0.5"></i> Bole Sub-City, Africa Avenue,<br>Addis Ababa, Ethiopia</p>
+                    </div>
+                </div>
+                <!-- Real Google Maps Live Coordinate Frame for Addis Ababa Location Mapping -->
+                <div class="rounded-3xl overflow-hidden shadow-md border border-slate-200 h-64 bg-slate-200">
+                    <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63048.244304660324!2d38.7444704!3d9.0107936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1m3!1zOcKwMDAnMzguOSJOIDM4wrA0NScxMC43IkU!5e0!3m2!1sen!2set!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ENTERPRISE INTEGRATED LUXURY FOOTER METRICS -->
+    <footer class="bg-premium-obsidian text-slate-400 text-xs py-16 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 font-medium">
+            <div class="space-y-4">
+                <span class="text-sm font-bold text-white tracking-wider uppercase">Abyssinia Premium</span>
+                <p class="text-slate-500 text-[11px] leading-relaxed">Elite clinical facility specializing in advanced surgical interventions and precise laboratory assessments inside Addis Ababa.</p>
+                <!-- Social Channels Grid Target Elements -->
+                <div class="flex items-center space-x-3 text-base text-slate-500">
+                    <a href="#" class="hover:text-premium-gold transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-premium-gold transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-premium-gold transition"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#" class="hover:text-premium-gold transition"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" class="hover:text-premium-gold transition"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="space-y-3">
+                <h5 class="text-premium-gold font-bold text-[10px] uppercase tracking-widest">Quick Links</h5>
+                <ul class="space-y-2 text-[11px]">
+                    <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="#services" class="hover:text-white transition">Services</a></li>
+                    <li><a href="#gallery" class="hover:text-white transition">Our Doctors</a></li>
+                    <li><a href="#workflow" class="hover:text-white transition">Management</a></li>
+                </ul>
+            </div>
+            <div class="space-y-3">
+                <h5 class="text-premium-gold font-bold text-[10px] uppercase tracking-widest">Medical Services</h5>
+                <ul class="space-y-2 text-[11px]">
+                    <li><a href="#services" class="hover:text-white transition">Cardiology</a></li>
+                    <li><a href="#services" class="hover:text-white transition">Neurology</a></li>
+                    <li><a href="#services" class="hover:text-white transition">General Surgery</a></li>
+                    <li><a href="#services" class="hover:text-white transition">Internal Medicine</a></li>
+                    <li><a href="#services" class="hover:text-white transition">Radiology Wing</a></li>
+                </ul>
+            </div>
+            <div class="space-y-2 text-slate-500 text-[11px]">
+                <h5 class="text-white font-bold text-[10px] uppercase tracking-widest mb-2">Priority Channels</h5>
+                <p>Hotline Node: <span class="text-white font-bold">0912643473</span></p>
+                <p>Shortcode Link: <span class="text-premium-gold font-bold">1412</span></p>
+                <p>Support: <span class="text-slate-400">habtamukidus96@gmail.com</span></p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-slate-900 text-center text-slate-600 text-[11px]">
+            &copy; 2026 Abyssinia Premium Medical Center. Elite Healthcare Architecture Presentation Layout.
+        </div>
     </footer>
 
+    <!-- INTERACTIVE EVENT DRIVERS SCRIPTS RUNTIME -->
     <script>
+        // Hamburger Menu Drawer State Manager Switching Logic
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
-        
-        // Toggle Open/Close State
+
         menuBtn.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.contains('hidden');
-            if (isHidden) {
+            const isClosed = mobileMenu.classList.contains('hidden');
+            if (isClosed) {
                 mobileMenu.classList.remove('hidden');
-                menuIcon.className = "fa-solid fa-xmark"; // Turn burger into an 'X'
+                menuIcon.className = "fa-solid fa-xmark text-premium-gold";
             } else {
                 closeMenu();
             }
         });
 
-        // Close Drawer when an item is selected
         function closeMenu() {
             mobileMenu.classList.add('hidden');
-            menuIcon.className = "fa-solid fa-bars"; // Reset to standard burger icon
+            menuIcon.className = "fa-solid fa-bars-staggered";
         }
+
+        // Hero Cinematic 5-Second Interval Switching Engine Loop Simulation
+        const slideVideo = document.getElementById('slide-video');
+        const slideMetrics = document.getElementById('slide-metrics');
+        
+        setInterval(() => {
+            if (slideVideo.classList.contains('active')) {
+                slideVideo.classList.remove('active');
+                slideMetrics.classList.add('active');
+            } else {
+                slideMetrics.classList.remove('active');
+                slideVideo.classList.add('active');
+            }
+        }, 5000); // Strict 5-Second Cycle Interval
     </script>
 </body>
 </html>
